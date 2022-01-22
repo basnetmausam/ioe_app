@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ioe_app/pages/bottom_navigation.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/utils/routes.dart';
 
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.navigationRoute,
       routes: {
-        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.navigationRoute: (context) => const NavigationPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
       },
     );
   }
