@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class CollegePage extends StatelessWidget {
+  const CollegePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
       child: Column(
         children: const [
           Text(
-            "Profile............................",
+            "Colleges",
             style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.bold,

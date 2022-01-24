@@ -6,14 +6,9 @@ import 'package:ioe_app/pages/profile_page.dart';
 class NavigationPage extends StatelessWidget {
   const NavigationPage({Key? key}) : super(key: key);
 
-  static const String _title = 'IOE App';
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
+    return const MyStatefulWidget();
   }
 }
 

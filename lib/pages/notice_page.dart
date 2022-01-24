@@ -6,9 +6,20 @@ class NoticePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Notices"),
+        body: Material(
+      color: Colors.indigo.shade900,
+      child: Column(
+        children: const [
+          Text(
+            "Notice Board............................",
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }
