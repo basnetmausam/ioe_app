@@ -10,12 +10,18 @@ class NoticePage extends StatelessWidget {
       color: Colors.indigo.shade900,
       child: Column(
         children: const [
-          Text(
-            "Notice Board............................",
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          Padding(
+            padding: EdgeInsets.all(24.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Notices",
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class ExtraPage extends StatelessWidget {
+  const ExtraPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
-                "Profile",
+                "Extras",
                 style: TextStyle(
                   fontSize: 45,
                   fontWeight: FontWeight.bold,

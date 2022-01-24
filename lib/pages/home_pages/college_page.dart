@@ -10,12 +10,18 @@ class CollegePage extends StatelessWidget {
       color: Colors.indigo.shade900,
       child: Column(
         children: const [
-          Text(
-            "Colleges",
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          Padding(
+            padding: EdgeInsets.all(24.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Colleges",
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ],

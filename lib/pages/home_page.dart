@@ -21,16 +21,19 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const Text(
-            "IOE App",
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          const Padding(
+            padding: EdgeInsets.all(24.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "IOE App",
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
           ),
           const SizedBox(
             height: 20,
@@ -45,7 +48,7 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.ioeRoute);
                 },
                 child: Container(
                   child: Column(
@@ -73,7 +76,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.programRoute);
                 },
                 child: Container(
                   child: Column(
@@ -132,7 +135,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.admissionRoute);
                 },
                 child: Container(
                   child: Column(
@@ -160,7 +163,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.researchRoute);
                 },
                 child: Container(
                   child: Column(
@@ -188,7 +191,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.partnershipRoute);
                 },
                 child: Container(
                   child: Column(
@@ -217,7 +220,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.newsbulletinRoute);
                 },
                 child: Container(
                   child: Column(
@@ -245,7 +248,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.collegeRoute);
+                  Navigator.pushNamed(context, MyRoutes.extrasRoute);
                 },
                 child: Container(
                   child: Column(
