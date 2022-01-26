@@ -11,6 +11,9 @@ class HomePage extends StatelessWidget {
       color: Colors.indigo.shade900,
       child: Column(
         children: [
+          const SizedBox(
+            height: 20,
+          ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Image.asset(
@@ -19,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           const Padding(
             padding: EdgeInsets.all(24.0),
@@ -35,9 +38,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          // const SizedBox(
+          //   height: 20,
+          // ),
           Flexible(
               child: GridView.count(
             crossAxisCount: 2,
@@ -227,9 +230,9 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Icon(Icons.arrow_back_ios_new_sharp, color: Colors.white),
-                      Text('News And Bulletin',
+                      Text('News & Bulletin',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 19,
                             color: Colors.white,
                           )),
                     ],
