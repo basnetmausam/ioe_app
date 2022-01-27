@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:ioe_app/pages/homeDrawer.dart';
 
 class ProgramPage extends StatelessWidget {
@@ -7,6 +8,7 @@ class ProgramPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.canvasColor,
       appBar: AppBar(
         title: Text('Programs'),
         centerTitle: true,

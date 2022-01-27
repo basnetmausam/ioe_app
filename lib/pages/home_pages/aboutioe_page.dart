@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:ioe_app/pages/homeDrawer.dart';
+import 'package:ioe_app/pages/homeDrawer.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -7,24 +9,26 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('About IOE'),
+        centerTitle: true,
+
+        //backgroundColor: Colors.indigo.shade900,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Colors.indigo.shade900,
+            Colors.indigo,
+            Colors.red.shade100
+          ])),
+        ),
+      ),
+      drawer: myDrawer(context),
       backgroundColor: context.canvasColor,
       body: Column(
         children: [
           const SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "About IOE",
-                style: Theme.of(context).textTheme.headline1,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 40,
+            height: 5,
           ),
           Flexible(
               child: ListView(
