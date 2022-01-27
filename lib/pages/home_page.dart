@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,12 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Material(
-      color: context.canvasColor,
+      color: Colors.indigo.shade900,
       child: Column(
         children: [
-          const SizedBox(
-            height: 20,
-          ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Image.asset(
@@ -23,21 +19,25 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
+          const Padding(
+            padding: EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "IOE App",
-                style: Theme.of(context).textTheme.headline1,
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
-          // const SizedBox(
-          //   height: 20,
-          // ),
+          const SizedBox(
+            height: 20,
+          ),
           Flexible(
               child: GridView.count(
             crossAxisCount: 2,
@@ -53,7 +53,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.info_outline_rounded, color: Colors.white),
                       Text('About IOE',
@@ -61,15 +60,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.school_outlined),
-                      Text('About IOE', style: context.textTheme.bodyText1),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -87,7 +81,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.event, color: Colors.white),
                       Text('Programs',
@@ -95,18 +88,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.air_outlined),
-                      Text(
-                        'Programs',
-                        style: context.textTheme.bodyText1,
-                      ),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -124,25 +109,20 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(
                         Icons.school,
                         color: Colors.white,
-=======
-                    children: [
-                      const Icon(
-                        Icons.hd_outlined,
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                       ),
-                      Text(
-                        'Colleges',
-                        style: context.textTheme.bodyText1,
-                      ),
+                      Text('Colleges',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          )),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -160,7 +140,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.collections_bookmark_rounded,
                           color: Colors.white),
@@ -169,18 +148,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.outlet_outlined),
-                      Text(
-                        'Admission',
-                        style: context.textTheme.bodyText1,
-                      ),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -198,7 +169,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.person_search_outlined, color: Colors.white),
                       Text('Research',
@@ -206,20 +176,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(
-                        Icons.outlined_flag,
-                      ),
-                      Text(
-                        'Research',
-                        style: context.textTheme.bodyText1,
-                      ),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -237,7 +197,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.insert_link, color: Colors.white),
                       Text('Partnership',
@@ -245,18 +204,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.pie_chart_outline_rounded),
-                      Text(
-                        'Partnership',
-                        style: context.textTheme.bodyText1,
-                      ),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -274,7 +225,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.menu_book, color: Colors.white),
                       Text('News And Bulletin',
@@ -282,16 +232,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.arrow_back_ios_new_sharp),
-                      Text('News & Bulletin',
-                          style: context.textTheme.bodyText1),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -309,7 +253,6 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
                     children: const [
                       Icon(Icons.add_comment_outlined, color: Colors.white),
                       Text('Extras',
@@ -317,18 +260,10 @@ class HomePage extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.white,
                           )),
-=======
-                    children: [
-                      const Icon(Icons.mic_external_off_outlined),
-                      Text(
-                        'Extras',
-                        style: context.textTheme.bodyText1,
-                      ),
->>>>>>> 2736e1bc44f2d9fffcd93536a1c6dc99b75b07dc
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: context.cardColor,
+                      color: Colors.indigo.shade800,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
