@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/pages/notice_page.dart';
 import 'package:ioe_app/pages/profile_page.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class NavigationPage extends StatelessWidget {
   const NavigationPage({Key? key}) : super(key: key);
@@ -38,8 +39,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.indigo.shade900,
-        unselectedItemColor: Colors.grey.shade600,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -55,7 +54,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );

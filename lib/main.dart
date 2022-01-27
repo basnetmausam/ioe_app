@@ -11,6 +11,7 @@ import 'package:ioe_app/pages/home_pages/partnership_page.dart';
 import 'package:ioe_app/pages/home_pages/program_page.dart';
 import 'package:ioe_app/pages/home_pages/research_page.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:ioe_app/widgets/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,11 +25,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      themeMode: ThemeMode.system,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-      ),
+      themeMode: ThemeMode.light,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.navigationRoute,
       routes: {
