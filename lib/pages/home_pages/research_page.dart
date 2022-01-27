@@ -10,7 +10,7 @@ class ResearchPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        title: Text('Programs'),
+        title: Text('Research'),
         centerTitle: true,
 
         //backgroundColor: Colors.indigo.shade900,

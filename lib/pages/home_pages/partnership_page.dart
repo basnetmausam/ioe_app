@@ -10,7 +10,7 @@ class PartnershipPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        title: Text('Programs'),
+        title: Text('Partnership'),
         centerTitle: true,
 
         //backgroundColor: Colors.indigo.shade900,

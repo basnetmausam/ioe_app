@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.school_outlined),
+                      const Icon(Icons.info_outline_rounded),
                       Text('About IOE', style: context.textTheme.bodyText1),
                     ],
                   ),
@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.air_outlined),
+                      const Icon(Icons.event),
                       Text(
                         'Programs',
                         style: context.textTheme.bodyText1,
@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        Icons.hd_outlined,
+                        Icons.school,
                       ),
                       Text(
                         'Colleges',
@@ -134,7 +134,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.outlet_outlined),
+                      const Icon(Icons.collections_bookmark),
                       Text(
                         'Admission',
                         style: context.textTheme.bodyText1,
@@ -162,7 +162,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        Icons.outlined_flag,
+                        Icons.person_search_outlined,
                       ),
                       Text(
                         'Research',
@@ -190,7 +190,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.pie_chart_outline_rounded),
+                      const Icon(Icons.insert_link),
                       Text(
                         'Partnership',
                         style: context.textTheme.bodyText1,
@@ -217,7 +217,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.arrow_back_ios_new_sharp),
+                      const Icon(Icons.menu_book),
                       Text('News & Bulletin',
                           style: context.textTheme.bodyText1),
                     ],
@@ -242,7 +242,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.mic_external_off_outlined),
+                      const Icon(Icons.add_comment_outlined),
                       Text(
                         'Extras',
                         style: context.textTheme.bodyText1,

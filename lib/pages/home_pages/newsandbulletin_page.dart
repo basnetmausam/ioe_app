@@ -31,7 +31,7 @@ class _NewsPageState extends State<NewsPage> {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        title: Text('Programs'),
+        title: Text('News And Bulletin'),
         centerTitle: true,
 
         //backgroundColor: Colors.indigo.shade900,
