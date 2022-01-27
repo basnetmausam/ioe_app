@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Material(
-      color: Colors.indigo.shade900,
+      color: context.canvasColor,
       child: Column(
         children: [
           const SizedBox(
@@ -24,17 +25,13 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Padding(
-            padding: EdgeInsets.all(24.0),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "IOE App",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headline1,
               ),
             ),
           ),
@@ -56,17 +53,13 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.school_outlined, color: Colors.white),
-                      Text('About IOE',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(Icons.school_outlined),
+                      Text('About IOE', style: context.textTheme.bodyText1),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -84,17 +77,16 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.air_outlined, color: Colors.white),
-                      Text('Programs',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(Icons.air_outlined),
+                      Text(
+                        'Programs',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -112,20 +104,18 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.hd_outlined,
-                        color: Colors.white,
                       ),
-                      Text('Colleges',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                      Text(
+                        'Colleges',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -143,17 +133,16 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.outlet_outlined, color: Colors.white),
-                      Text('Admission',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(Icons.outlet_outlined),
+                      Text(
+                        'Admission',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -171,17 +160,18 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.outlined_flag, color: Colors.white),
-                      Text('Research',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(
+                        Icons.outlined_flag,
+                      ),
+                      Text(
+                        'Research',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -199,18 +189,16 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.pie_chart_outline_rounded,
-                          color: Colors.white),
-                      Text('Partnership',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(Icons.pie_chart_outline_rounded),
+                      Text(
+                        'Partnership',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -228,17 +216,14 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.arrow_back_ios_new_sharp, color: Colors.white),
+                    children: [
+                      const Icon(Icons.arrow_back_ios_new_sharp),
                       Text('News & Bulletin',
-                          style: TextStyle(
-                            fontSize: 19,
-                            color: Colors.white,
-                          )),
+                          style: context.textTheme.bodyText1),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
@@ -256,18 +241,16 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.mic_external_off_outlined,
-                          color: Colors.white),
-                      Text('Extras',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          )),
+                    children: [
+                      const Icon(Icons.mic_external_off_outlined),
+                      Text(
+                        'Extras',
+                        style: context.textTheme.bodyText1,
+                      ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.indigo.shade800,
+                      color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,

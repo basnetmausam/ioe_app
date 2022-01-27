@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -7,20 +8,16 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Material(
-      color: Colors.indigo.shade900,
+      color: context.canvasColor,
       child: Column(
-        children: const [
+        children: [
           Padding(
             padding: EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "Profile",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headline1,
               ),
             ),
           ),

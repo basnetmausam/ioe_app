@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -6,20 +7,19 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo.shade900,
+      backgroundColor: context.canvasColor,
       body: Column(
         children: [
-          const Padding(
+          const SizedBox(
+            height: 60,
+          ),
+          Padding(
             padding: EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "About IOE",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headline1,
               ),
             ),
           ),
@@ -59,7 +59,7 @@ class AboutPage extends StatelessWidget {
                 title: Text("IOE Email Login"),
               )),
             ],
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
           ))
         ],
       ),

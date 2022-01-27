@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:velocity_x/velocity_x.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -14,7 +15,6 @@ class _NewsPageState extends State<NewsPage> {
   var data;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getData();
   }
@@ -28,20 +28,16 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo.shade900,
+      backgroundColor: context.canvasColor,
       body: Column(
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "News and Bulletin",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headline1,
               ),
             ),
           ),
