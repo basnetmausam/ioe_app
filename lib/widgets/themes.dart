@@ -13,8 +13,21 @@ class MyTheme {
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
+          headline2: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+          headline3: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          ),
           bodyText1: TextStyle(
             fontSize: 20,
+            color: Colors.black,
+          ),
+          bodyText2: TextStyle(
+            fontSize: 15,
             color: Colors.black,
           )),
       iconTheme: const IconThemeData(color: Colors.black),
@@ -40,8 +53,21 @@ class MyTheme {
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
+            headline2: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            headline3: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
             bodyText1: TextStyle(
               fontSize: 20,
+              color: Colors.white,
+            ),
+            bodyText2: TextStyle(
+              fontSize: 15,
               color: Colors.white,
             )),
         iconTheme: const IconThemeData(color: Colors.white),

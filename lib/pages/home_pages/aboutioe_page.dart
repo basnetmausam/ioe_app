@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AboutPage extends StatelessWidget {
@@ -34,10 +35,13 @@ class AboutPage extends StatelessWidget {
           ),
           Flexible(
               child: ListView(
-            children: const [
+            children: [
               Card(
                   child: ListTile(
-                title: Padding(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.glanceRoute);
+                },
+                title: const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
                     "IOE at a Glance",
@@ -46,7 +50,10 @@ class AboutPage extends StatelessWidget {
               )),
               Card(
                 child: ListTile(
-                  title: Padding(
+                  onTap: () {
+                    Navigator.pushNamed(context, MyRoutes.deanmsgRoute);
+                  },
+                  title: const Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text("Message from Dean"),
                   ),
@@ -55,35 +62,50 @@ class AboutPage extends StatelessWidget {
               ),
               Card(
                   child: ListTile(
-                title: Padding(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.visionRoute);
+                },
+                title: const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text("Vision Mission Golas and Objectives"),
                 ),
               )),
               Card(
                   child: ListTile(
-                title: Padding(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.historyRoute);
+                },
+                title: const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text("History of IOE"),
                 ),
               )),
               Card(
                   child: ListTile(
-                title: Padding(
-                  padding: EdgeInsets.all(16.0),
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.facultiesRoute);
+                },
+                title: const Padding(
+                  padding: const EdgeInsets.all(16.0),
                   child: Text("Faculties & Staffs"),
                 ),
               )),
               Card(
                   child: ListTile(
-                title: Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("Contact Us"),
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.contactRoute);
+                },
+                title: const Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: const Text("Contact Us"),
                 ),
               )),
               Card(
                   child: ListTile(
-                title: Padding(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.ioeloginRoute);
+                },
+                title: const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text("IOE Email Login"),
                 ),

@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/pages/about_pages/contact_page.dart';
+import 'package:ioe_app/pages/about_pages/faculties_page.dart';
+import 'package:ioe_app/pages/about_pages/glance_page.dart';
+import 'package:ioe_app/pages/about_pages/history.dart';
+import 'package:ioe_app/pages/about_pages/ioeemaillogin_page.dart';
+import 'package:ioe_app/pages/about_pages/messagedean_page.dart';
+import 'package:ioe_app/pages/about_pages/vision_page.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
 import 'package:ioe_app/pages/home_pages/aboutioe_page.dart';
 import 'package:ioe_app/pages/home_pages/admission_page.dart';
@@ -32,6 +39,8 @@ class MyApp extends StatelessWidget {
       routes: {
         MyRoutes.navigationRoute: (context) => const NavigationPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
+
+        // HOMEPAGE
         MyRoutes.collegeRoute: (context) => const CollegePage(),
         MyRoutes.newsbulletinRoute: (context) => const NewsPage(),
         MyRoutes.ioeRoute: (context) => const AboutPage(),
@@ -40,6 +49,15 @@ class MyApp extends StatelessWidget {
         MyRoutes.researchRoute: (context) => const ResearchPage(),
         MyRoutes.partnershipRoute: (context) => const PartnershipPage(),
         MyRoutes.extrasRoute: (context) => const ExtraPage(),
+
+        //ABOUT IOE
+        MyRoutes.contactRoute: (context) => const ContactPage(),
+        MyRoutes.ioeloginRoute: (context) => const IOEmailPage(),
+        MyRoutes.deanmsgRoute: (context) => const MessagePage(),
+        MyRoutes.historyRoute: (context) => const HistoryPage(),
+        MyRoutes.visionRoute: (context) => const VisionPage(),
+        MyRoutes.facultiesRoute: (context) => const FacultyPage(),
+        MyRoutes.glanceRoute: (context) => const GlancePage(),
       },
     );
   }
