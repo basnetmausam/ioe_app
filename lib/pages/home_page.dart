@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.school_outlined, color: Colors.white),
+                      Icon(Icons.info_outline_rounded, color: Colors.white),
                       Text('About IOE',
                           style: TextStyle(
                             fontSize: 20,
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.air_outlined, color: Colors.white),
+                      Icon(Icons.event, color: Colors.white),
                       Text('Programs',
                           style: TextStyle(
                             fontSize: 20,
@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Icon(
-                        Icons.hd_outlined,
+                        Icons.school,
                         color: Colors.white,
                       ),
                       Text('Colleges',
@@ -141,7 +141,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.outlet_outlined, color: Colors.white),
+                      Icon(Icons.collections_bookmark_rounded,
+                          color: Colors.white),
                       Text('Admission',
                           style: TextStyle(
                             fontSize: 20,
@@ -169,7 +170,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.outlined_flag, color: Colors.white),
+                      Icon(Icons.person_search_outlined, color: Colors.white),
                       Text('Research',
                           style: TextStyle(
                             fontSize: 20,
@@ -197,8 +198,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.pie_chart_outline_rounded,
-                          color: Colors.white),
+                      Icon(Icons.insert_link, color: Colors.white),
                       Text('Partnership',
                           style: TextStyle(
                             fontSize: 20,
@@ -226,7 +226,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.arrow_back_ios_new_sharp, color: Colors.white),
+                      Icon(Icons.menu_book, color: Colors.white),
                       Text('News And Bulletin',
                           style: TextStyle(
                             fontSize: 20,
@@ -254,8 +254,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.mic_external_off_outlined,
-                          color: Colors.white),
+                      Icon(Icons.add_comment_outlined, color: Colors.white),
                       Text('Extras',
                           style: TextStyle(
                             fontSize: 20,

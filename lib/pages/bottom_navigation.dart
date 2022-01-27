@@ -50,7 +50,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Notices',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_off_outlined),
+            icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],

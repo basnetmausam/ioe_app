@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/pages/homeDrawer.dart';
 
 class ProgramPage extends StatelessWidget {
   const ProgramPage({Key? key}) : super(key: key);
@@ -6,26 +7,21 @@ class ProgramPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Material(
-      color: Colors.indigo.shade900,
-      child: Column(
-        children: const [
-          Padding(
-            padding: EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Programs",
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ],
+      appBar: AppBar(
+        title: Text('Programs'),
+        centerTitle: true,
+
+        //backgroundColor: Colors.indigo.shade900,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Colors.indigo.shade900,
+            Colors.indigo,
+            Colors.red.shade100
+          ])),
+        ),
       ),
-    ));
+      drawer: myDrawer(context),
+    );
   }
 }
