@@ -7,6 +7,12 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "About IOE",
+          style: Theme.of(context).textTheme.headline1,
+        ),
+      ),
       backgroundColor: context.canvasColor,
       body: Column(
         children: [
@@ -14,7 +20,7 @@ class AboutPage extends StatelessWidget {
             height: 60,
           ),
           Padding(
-            padding: EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -31,32 +37,56 @@ class AboutPage extends StatelessWidget {
             children: const [
               Card(
                   child: ListTile(
-                title: Text("IOE at a Glance"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    "IOE at a Glance",
+                  ),
+                ),
               )),
               Card(
                 child: ListTile(
-                  title: Text("Message from Dean"),
+                  title: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text("Message from Dean"),
+                  ),
+                  // subtitle: Text("ohhh hoooo"),
                 ),
               ),
               Card(
                   child: ListTile(
-                title: Text("Vision Mission Golas and Objectives"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("Vision Mission Golas and Objectives"),
+                ),
               )),
               Card(
                   child: ListTile(
-                title: Text("History of IOE"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("History of IOE"),
+                ),
               )),
               Card(
                   child: ListTile(
-                title: Text("Faculties & Staffs"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("Faculties & Staffs"),
+                ),
               )),
               Card(
                   child: ListTile(
-                title: Text("Contact Us"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("Contact Us"),
+                ),
               )),
               Card(
                   child: ListTile(
-                title: Text("IOE Email Login"),
+                title: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("IOE Email Login"),
+                ),
               )),
             ],
             padding: const EdgeInsets.all(10),

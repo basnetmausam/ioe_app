@@ -218,8 +218,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(Icons.arrow_back_ios_new_sharp),
-                      Text('News & Bulletin',
-                          style: context.textTheme.bodyText1),
+                      Text('News', style: context.textTheme.bodyText1),
                     ],
                   ),
                   decoration: BoxDecoration(

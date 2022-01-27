@@ -32,7 +32,7 @@ class _NewsPageState extends State<NewsPage> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(24.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
