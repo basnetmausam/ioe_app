@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
 import 'package:ioe_app/pages/home_pages/aboutioe_page.dart';
 import 'package:ioe_app/pages/home_pages/admission_page.dart';

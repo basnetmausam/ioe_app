@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/pages/notice_page.dart';
 import 'package:ioe_app/pages/profile_page.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class NavigationPage extends StatelessWidget {
   const NavigationPage({Key? key}) : super(key: key);

@@ -1,37 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        cardColor: Colors.white,
-        canvasColor: creamColor,
-
-        textTheme: const TextTheme(
-            headline1: TextStyle(
-              fontSize: 45,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-            bodyText1: TextStyle(
-              fontSize: 20,
-              color: Colors.black,
-            )),
-
-        iconTheme: const IconThemeData(color: Colors.black),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: creamColor,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey.shade600,
-        ),
-        // appBarTheme: const AppBarTheme(
-        //   color: Colors.white,
-        //   elevation: 0.0,
-        //   iconTheme: IconThemeData(color: Colors.black),
-        // )
-      );
+      primarySwatch: Colors.deepPurple,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      cardColor: Colors.white,
+      canvasColor: creamColor,
+      textTheme: const TextTheme(
+          headline1: TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+          bodyText1: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          )),
+      iconTheme: const IconThemeData(color: Colors.black),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: creamColor,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey.shade600,
+      ),
+      appBarTheme: AppBarTheme(
+        color: creamColor,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: Colors.black),
+      ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
