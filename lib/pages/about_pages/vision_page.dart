@@ -19,30 +19,27 @@ class VisionPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "IOE Vision, Mission, Goals & Objectives",
-                style: Theme.of(context).textTheme.headline2,
-              ),
+            child: Text(
+              "IOE Vision, Mission, Goals & Objectives",
+              style: Theme.of(context).textTheme.headline2,
             ),
           ),
           Flexible(
             child: SingleChildScrollView(
               child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 30,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "IOE Vision",
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
+                      Text(
+                        "IOE Vision",
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(
                         height: 7,
@@ -54,12 +51,9 @@ class VisionPage extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "IOE Mission",
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
+                      Text(
+                        "IOE Mission",
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(
                         height: 7,
@@ -71,32 +65,23 @@ class VisionPage extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "IOE Goals",
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
+                      Text(
+                        "IOE Goals",
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(
                         height: 7,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "• Enhance Academic excellence \n• Perform as Think-Tank\n• Establish Governance\n• Ensure Financial sustainability\n• Establish Collaboration & cooperation",
-                          style: Theme.of(context).textTheme.bodyText2,
-                        ),
+                      Text(
+                        "• Enhance Academic excellence \n• Perform as Think-Tank\n• Establish Governance\n• Ensure Financial sustainability\n• Establish Collaboration & cooperation",
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                       const SizedBox(
                         height: 40,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "IOE Objectives",
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
+                      Text(
+                        "IOE Objectives",
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(
                         height: 7,
@@ -108,12 +93,9 @@ class VisionPage extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "Values:",
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
+                      Text(
+                        "Values:",
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(
                         height: 7,

@@ -8,28 +8,35 @@ class MyTheme {
       cardColor: Colors.white,
       canvasColor: creamColor,
       textTheme: const TextTheme(
-          headline1: TextStyle(
-            fontSize: 45,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-          headline2: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-          headline3: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
-          ),
-          bodyText1: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
-          ),
-          bodyText2: TextStyle(
-            fontSize: 15,
-            color: Colors.black,
-          )),
+        headline1: TextStyle(
+          fontSize: 45,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        headline2: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        headline3: TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+        ),
+        headline4: TextStyle(
+          fontSize: 17,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        bodyText1: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        bodyText2: TextStyle(
+          fontSize: 14,
+          color: Colors.black,
+        ),
+      ),
       iconTheme: const IconThemeData(color: Colors.black),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: creamColor,
