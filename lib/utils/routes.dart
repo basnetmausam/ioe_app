@@ -9,4 +9,7 @@ class MyRoutes {
   static String partnershipRoute = "/partnership";
   static String newsbulletinRoute = "/news&bulletin";
   static String extrasRoute = "/extras";
+  static String undergraduateRoute = "/undergraduate";
+  static String graduateRoute = "/graduate";
+  static String postgraduateRoute = "/postgraduate";
 }

@@ -10,6 +10,9 @@ import 'package:ioe_app/pages/home_pages/newsandbulletin_page.dart';
 import 'package:ioe_app/pages/home_pages/partnership_page.dart';
 import 'package:ioe_app/pages/home_pages/program_page.dart';
 import 'package:ioe_app/pages/home_pages/research_page.dart';
+import 'package:ioe_app/pages/programs_page/undergraduate.dart';
+import 'package:ioe_app/pages/programs_page/graduate.dart';
+import 'package:ioe_app/pages/programs_page/postgraduate.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
 
@@ -41,6 +44,9 @@ class MyApp extends StatelessWidget {
         MyRoutes.researchRoute: (context) => const ResearchPage(),
         MyRoutes.partnershipRoute: (context) => const PartnershipPage(),
         MyRoutes.extrasRoute: (context) => const ExtraPage(),
+        MyRoutes.undergraduateRoute: (context) => const Undergraduate(),
+        MyRoutes.graduateRoute: (context) => const Graduate(),
+        MyRoutes.postgraduateRoute: (context) => const PostGraduate(),
       },
     );
   }
