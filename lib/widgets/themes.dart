@@ -1,37 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        cardColor: Colors.white,
-        canvasColor: creamColor,
-
-        textTheme: const TextTheme(
-            headline1: TextStyle(
-              fontSize: 45,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-            bodyText1: TextStyle(
-              fontSize: 20,
-              color: Colors.black,
-            )),
-
-        iconTheme: const IconThemeData(color: Colors.black),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: creamColor,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey.shade600,
+      primarySwatch: Colors.deepPurple,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      cardColor: Colors.white,
+      canvasColor: creamColor,
+      textTheme: const TextTheme(
+        headline1: TextStyle(
+          fontSize: 45,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
         ),
-        // appBarTheme: const AppBarTheme(
-        //   color: Colors.white,
-        //   elevation: 0.0,
-        //   iconTheme: IconThemeData(color: Colors.black),
-        // )
-      );
+        headline2: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        headline3: TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+        ),
+        headline4: TextStyle(
+          fontSize: 17,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        bodyText1: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        bodyText2: TextStyle(
+          fontSize: 14,
+          color: Colors.black,
+        ),
+      ),
+      iconTheme: const IconThemeData(color: Colors.black),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: creamColor,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey.shade600,
+      ),
+      appBarTheme: AppBarTheme(
+        color: creamColor,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: Colors.black),
+      ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
@@ -44,8 +60,21 @@ class MyTheme {
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
+            headline2: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            headline3: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
             bodyText1: TextStyle(
               fontSize: 20,
+              color: Colors.white,
+            ),
+            bodyText2: TextStyle(
+              fontSize: 15,
               color: Colors.white,
             )),
         iconTheme: const IconThemeData(color: Colors.white),

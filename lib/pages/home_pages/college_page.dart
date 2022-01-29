@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CollegePage extends StatelessWidget {
@@ -7,22 +8,63 @@ class CollegePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: context.canvasColor,
-        body: Material(
-          child: Column(
+      appBar: AppBar(
+        title: Text(
+          "About IOE",
+          style: Theme.of(context).textTheme.headline1,
+        ),
+      ),
+      backgroundColor: context.canvasColor,
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 60,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Colleges",
+                style: Theme.of(context).textTheme.headline1,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Flexible(
+              child: ListView(
             children: [
-              Padding(
-                padding: EdgeInsets.all(24.0),
-                child: Align(
-                  alignment: Alignment.topLeft,
+              Card(
+                  child: ListTile(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.affiliatedRoute);
+                },
+                title: const Padding(
+                  padding: EdgeInsets.all(16.0),
                   child: Text(
-                    "Colleges",
-                    style: Theme.of(context).textTheme.headline1,
+                    "Affiliated Colleges",
                   ),
+                ),
+              )),
+              Card(
+                child: ListTile(
+                  onTap: () {
+                    Navigator.pushNamed(context, MyRoutes.constituentRoute);
+                  },
+                  title: const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text("Constituent Colleges"),
+                  ),
+                  // subtitle: Text("ohhh hoooo"),
                 ),
               ),
             ],
-          ),
-        ));
+            padding: const EdgeInsets.all(10),
+          ))
+        ],
+      ),
+    );
   }
 }
