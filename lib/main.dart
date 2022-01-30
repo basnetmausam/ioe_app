@@ -39,6 +39,7 @@ import 'package:ioe_app/pages/programs_pages/Undergraduate%20(B.E).dart';
 import 'package:ioe_app/pages/research_pages/centres_page.dart';
 import 'package:ioe_app/pages/research_pages/facultyresearch_page.dart';
 import 'package:ioe_app/pages/research_pages/publication_page.dart';
+import 'package:ioe_app/pages/research_pages/researchinfrastructures_page.dart';
 import 'package:ioe_app/pages/research_pages/seminars_page.dart';
 import 'package:ioe_app/pages/research_pages/workshop_page.dart';
 import 'package:ioe_app/utils/routes.dart';
@@ -116,6 +117,8 @@ class MyApp extends StatelessWidget {
 
         // Research Page
         MyRoutes.centresRoute: (context) => const CentresPage(),
+        MyRoutes.researchinfraRoute: (context) => const ResearchInfraPage(),
+
         MyRoutes.faculresRoute: (context) => const FacultiesResearchPage(),
         MyRoutes.publicationRoute: (context) => const PublicationsPage(),
         MyRoutes.seminarsRoute: (context) => const SeminarsPage(),
