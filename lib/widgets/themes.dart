@@ -7,6 +7,7 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.white,
       canvasColor: creamColor,
+      primaryColor: Colors.black,
       textTheme: const TextTheme(
         headline1: TextStyle(
           fontSize: 45,
@@ -54,6 +55,7 @@ class MyTheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: darkCard,
         canvasColor: darkCanvas,
+        primaryColor: Colors.white,
         textTheme: const TextTheme(
             headline1: TextStyle(
               fontSize: 45,

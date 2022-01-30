@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:blurry/blurry.dart';
 
 class CentresPage extends StatelessWidget {
   const CentresPage({Key? key}) : super(key: key);

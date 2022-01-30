@@ -28,6 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   blurry: ^1.4.1
+  bulleted_list: ^0.0.1+0.1a
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
