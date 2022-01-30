@@ -16,8 +16,28 @@ import 'package:ioe_app/pages/admission_pages/phd_page.dart';
 import 'package:ioe_app/pages/admission_pages/schlorship_page.dart';
 import 'package:ioe_app/pages/admission_pages/why_page.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
+// college
 import 'package:ioe_app/pages/colleges_page/affiliated_page.dart';
 import 'package:ioe_app/pages/colleges_page/constituent_page.dart';
+import 'package:ioe_app/widgets/map.dart';
+// constituent
+import 'package:ioe_app/pages/colleges_page/Thapathali_campus.dart';
+import 'package:ioe_app/pages/colleges_page/pulchowk_page.dart';
+import 'package:ioe_app/pages/colleges_page/Purwanchal_page.dart';
+import 'package:ioe_app/pages/colleges_page/Paschimanchal_page.dart';
+import 'package:ioe_app/pages/colleges_page/ChitwanCampus_page.dart';
+// affiliated
+import 'package:ioe_app/pages/colleges_page/advanced.dart';
+import 'package:ioe_app/pages/colleges_page/himalaya.dart';
+import 'package:ioe_app/pages/colleges_page/janakpur.dart';
+import 'package:ioe_app/pages/colleges_page/kantipur.dart';
+import 'package:ioe_app/pages/colleges_page/kathford.dart';
+import 'package:ioe_app/pages/colleges_page/kathmandu.dart';
+import 'package:ioe_app/pages/colleges_page/khwopa.dart';
+import 'package:ioe_app/pages/colleges_page/lalitpur.dart';
+import 'package:ioe_app/pages/colleges_page/national.dart';
+import 'package:ioe_app/pages/colleges_page/sagarmatha.dart';
+
 import 'package:ioe_app/pages/home_pages/aboutioe_page.dart';
 import 'package:ioe_app/pages/home_pages/admission_page.dart';
 import 'package:ioe_app/pages/home_pages/college_page.dart';
@@ -98,6 +118,27 @@ class MyApp extends StatelessWidget {
         //Colleges Page
         MyRoutes.affiliatedRoute: (context) => const AffiliatedPage(),
         MyRoutes.constituentRoute: (context) => const ConstituentPage(),
+        MyRoutes.mapRoute: (context) => MapPage(),
+        // constituted
+        MyRoutes.pulchowkCollegeRoute: (context) => const PulchowkPage(),
+        MyRoutes.thapathaliCollegeRoute: (context) => const ThapathaliPage(),
+        MyRoutes.purwanchalCollegeRoute: (context) => const PurwanchalPage(),
+        MyRoutes.paschimanchalCollegeRoute: (context) =>
+            const PaschimanchalPage(),
+        MyRoutes.chitwanCampusRoute: (context) => const ChitwanCampusPage(),
+        // affiliated
+        MyRoutes.advancedCollegeRoute: (context) => const AdvancedCollegePage(),
+        MyRoutes.himalayaCollegeRoute: (context) => const HimalayaCollegePage(),
+        MyRoutes.janakpurCollegeRoute: (context) => const JanakpurCollegePage(),
+        MyRoutes.kantipurCollegeRoute: (context) => const KantipurCollegePage(),
+        MyRoutes.kathfordCollegeRoute: (context) => const KathfordCollegePage(),
+        MyRoutes.kathmanduCollegeRoute: (context) =>
+            const KathmanduCollegePage(),
+        MyRoutes.khwopaCollegeRoute: (context) => const KhwopaCollegePage(),
+        MyRoutes.lalitpurCollegeRoute: (context) => const LalitpurCollegePage(),
+        MyRoutes.nationalCollegeRoute: (context) => const NationalCollegePage(),
+        MyRoutes.sagarmathaCollegeRoute: (context) =>
+            const SagarmathaCollegePage(),
 
         //News and Bulletin
         MyRoutes.eventsRoute: (context) => const EventsPage(),
