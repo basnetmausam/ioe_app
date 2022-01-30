@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title : Text('Login'),
+        title : Text('Profile'),
         backgroundColor: Colors.blue,
       ),
       body: loginUI(),
@@ -37,6 +37,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   loggedInUI(GoogleSignInController model) {
+
     return ListView(
           children: <Widget>[
             Container(
@@ -137,6 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
+                  Divider(),
                   ListTile(
                     title: Text(
                       'Field of Study',
@@ -153,6 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
+                  Divider(),
                   ListTile(
                     title: Text(
                       'Degree',
@@ -169,6 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
+                  Divider(),
                   ListTile(
                     title: Text(
                       'Contact No',
@@ -194,20 +198,35 @@ class _LoginPageState extends State<LoginPage> {
 
   loginControls(BuildContext context) {
     return Center(
-      child:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          GestureDetector(
-            child: Image.asset(
-              'assets/images/signinwithgoogle.png',
-              width: 200,
-          ),
-            onTap: (){
-              Provider.of<GoogleSignInController>(context, listen: false).login();
-            },
-          ),
-        ],
-        ),
-      );  
+      child: FloatingActionButton.extended(
+        onPressed: () {
+          Provider.of<GoogleSignInController>(context, listen: false).login();
+        },
+        icon: Image.asset( 
+            'assets/images/google_logo.png',
+            width: 30, 
+            height: 30
+            ),
+        label: Text('Sign in with Google'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+
+      ),
+      );
+      // child:Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     GestureDetector(
+      //       child: Image.asset(
+      //         'assets/images/signinwithgoogle.png',
+      //         width: 200,
+      //     ),
+      //       onTap: (){
+      //         Provider.of<GoogleSignInController>(context, listen: false).login();
+      //       },
+      //     ),
+      //   ],
+      //   ),
+      //);  
   }
 }
