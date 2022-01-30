@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: <Widget>[
                   ListTile(
                     title: Text(
-                      model.googleAccount!.email,
+                      'Email',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     subtitle: Text(
-                      'palmeiro.leonardo@gmail.com',
+                      model.googleAccount!.email,
                       style: TextStyle(
                         fontSize: 18
                       ),
@@ -195,6 +195,7 @@ class _LoginPageState extends State<LoginPage> {
   loginControls(BuildContext context) {
     return Center(
       child:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
             child: Image.asset(
