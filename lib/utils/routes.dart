@@ -35,7 +35,29 @@ class MyRoutes {
 
   //College Pages
   static String constituentRoute = "/colleges/constituent";
+  // constituent
+  static String pulchowkCollegeRoute = "/colleges/constituent/pulchwok";
+  static String thapathaliCollegeRoute = "/colleges/constituent/thapathali";
+  static String purwanchalCollegeRoute = "/colleges/constituent/purwanchal";
+  static String paschimanchalCollegeRoute =
+      "/colleges/constituent/paschimanchal";
+  static String chitwanCampusRoute = "/colleges/constituent/chitwancampus";
+
   static String affiliatedRoute = "/colleges/affiliated";
+  // affiliated
+  static String advancedCollegeRoute = "/colleges/affiliated/advanced";
+  static String himalayaCollegeRoute = "/colleges/affiliated/himalaya";
+  static String janakpurCollegeRoute = "/colleges/affiliated/janakpur";
+  static String kantipurCollegeRoute = "/colleges/affiliated/kantipur";
+  static String kathfordCollegeRoute = "/colleges/affiliated/kathford";
+  static String kathmanduCollegeRoute = "/colleges/affiliated/kathmandu";
+  static String khwopaCollegeRoute = "/colleges/affiliated/khwopa";
+  static String lalitpurCollegeRoute = "/colleges/affiliated/lalitpur";
+  static String nationalCollegeRoute = "/colleges/affiliated/national";
+  static String sagarmathaCollegeRoute = "/colleges/affiliated/sagarmatha";
+
+  //google map
+  static String mapRoute = 'colleges/maps';
 
   //News And Bulletin Pages
   static String newssRoute = "/news&bulletin/news";
