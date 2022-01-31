@@ -86,7 +86,7 @@ class AboutPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.facultiesRoute);
                 },
                 title: const Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text("Faculties & Staffs"),
                 ),
               )),
@@ -96,8 +96,8 @@ class AboutPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.contactRoute);
                 },
                 title: const Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: const Text("Contact Us"),
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("Contact Us"),
                 ),
               )),
               Card(

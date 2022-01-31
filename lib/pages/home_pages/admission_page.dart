@@ -86,7 +86,7 @@ class AdmissionPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.mscRoute);
                 },
                 title: const Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text("Graduate(M.Sc.)"),
                 ),
               )),
@@ -96,8 +96,8 @@ class AdmissionPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.phdRoute);
                 },
                 title: const Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: const Text("Post Graduate(Ph. D)"),
+                  padding: EdgeInsets.all(16.0),
+                  child: Text("Post Graduate(Ph. D)"),
                 ),
               )),
               Card(

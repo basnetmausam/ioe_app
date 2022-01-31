@@ -39,7 +39,7 @@ class ResearchPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.whyRoute);
+                  Navigator.pushNamed(context, MyRoutes.centresRoute);
                 },
                 title: const Padding(
                   padding: EdgeInsets.all(16.0),
@@ -86,7 +86,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.seminarsRoute);
                 },
                 title: const Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text("Seminars & Conferences"),
                 ),
               )),

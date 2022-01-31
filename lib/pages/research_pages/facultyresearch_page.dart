@@ -5,6 +5,28 @@ class FacultiesResearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Research",
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Faculties Researchers",
+              style: Theme.of(context).textTheme.headline2,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

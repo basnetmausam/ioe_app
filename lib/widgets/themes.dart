@@ -7,6 +7,7 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.white,
       canvasColor: creamColor,
+      primaryColor: Colors.black,
       textTheme: const TextTheme(
         headline1: TextStyle(
           fontSize: 45,
@@ -46,7 +47,7 @@ class MyTheme {
       appBarTheme: AppBarTheme(
         color: creamColor,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
       ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
@@ -54,6 +55,7 @@ class MyTheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: darkCard,
         canvasColor: darkCanvas,
+        primaryColor: Colors.white,
         textTheme: const TextTheme(
             headline1: TextStyle(
               fontSize: 45,
@@ -69,12 +71,18 @@ class MyTheme {
               fontSize: 20,
               color: Colors.white,
             ),
+            headline4: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
             bodyText1: TextStyle(
               fontSize: 20,
+              fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
             bodyText2: TextStyle(
-              fontSize: 15,
+              fontSize: 14,
               color: Colors.white,
             )),
         iconTheme: const IconThemeData(color: Colors.white),
