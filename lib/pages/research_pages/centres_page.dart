@@ -22,7 +22,7 @@ class CentresPage extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: Text(
                 "Research Centres",
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.headline2,
               ),
             ),
           ),

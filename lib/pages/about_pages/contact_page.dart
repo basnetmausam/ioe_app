@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class ContactPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(
