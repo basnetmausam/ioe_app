@@ -1,4 +1,6 @@
+import 'package:bulleted_list/bulleted_list.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class ResearchInfraPage extends StatelessWidget {
   const ResearchInfraPage({Key? key}) : super(key: key);
@@ -61,8 +63,26 @@ class ResearchInfraPage extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
+                      BulletedList(
+                        listItems: const [
+                          "Picture books in many formats, from board books to big books",
+                          "Fiction from first chapter books to Young Adult fiction and A-level texts",
+                          "Graphic novels",
+                          "Collections of Poetry and Folktales",
+                          "Examples of Reading schemes",
+                          "A selection of Maps, Charts and Posters",
+                          "Audiovisual material",
+                          "Games, kits and flashcards",
+                          "Textbooks covering main curriculum subjects and a variety of exam boards",
+                          "Non-fiction background and wider reading books",
+                          "Children's Book Corner modelling best primary classroom practice",
+                        ],
+                        listOrder: ListOrder.ordered,
+                        style: Theme.of(context).textTheme.bodyText2,
+                        bulletColor: context.primaryColor,
+                      ),
                       Text(
-                        "• Picture books in many formats, from board books to big books\n• Fiction from first chapter books to Young Adult fiction and A-level texts\n• Graphic novels\n• Collections of Poetry and Folktales\n• Examples of Reading schemes\n• A selection of Maps, Charts and Posters\n• Audiovisual material\n• Games, kits and flashcards\n• Textbooks covering main curriculum subjects and a variety of exam boards\n• Non-fiction background and wider reading books\n• Children's Book Corner modelling best primary classroom practice\n\nTo supplement the main areas of the collection we also have a Basic Skills collection and journals supporting classroom work.\n\n\nAs our intention is to reflect resources used in English schools, the bulk of the collection is from UK educational and children's publishers, with material also from mainstream charities, voluntary groups, and audiovisual producers. Our aim is to offer a wide selection of high quality and currently available material, however inclusion does not imply recommendation.\n\nWith a few exceptions material from the Curriculum Resources collection can be borrowed for eight weeks and renewed.",
+                        "To supplement the main areas of the collection we also have a Basic Skills collection and journals supporting classroom work.\n\n\nAs our intention is to reflect resources used in English schools, the bulk of the collection is from UK educational and children's publishers, with material also from mainstream charities, voluntary groups, and audiovisual producers. Our aim is to offer a wide selection of high quality and currently available material, however inclusion does not imply recommendation.\n\nWith a few exceptions material from the Curriculum Resources collection can be borrowed for eight weeks and renewed.",
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                     ],

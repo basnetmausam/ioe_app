@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:ioe_app/pages/about_pages/contactForm.dart';
+
+import 'package:ioe_app/utils/homeDrawer.dart';
+
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -13,11 +17,25 @@ class ContactPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(
               height: 20,
+
+      drawer: myDrawer(context),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Contact Us",
+              style: Theme.of(context).textTheme.headline2,
+
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
