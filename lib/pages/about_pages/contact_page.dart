@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/pages/about_pages/contactForm.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -12,40 +13,45 @@ class ContactPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Contact Us",
-              style: Theme.of(context).textTheme.headline2,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20,
             ),
-          ),
-          Card(
-            child: Column(
-              children: const [
-                Card(
-                    child: ListTile(
-                  title: Text("Email"),
-                  trailing: Text("admin@ioe.edu.np"),
-                )),
-                Card(
-                    child: ListTile(
-                  title: Text("Telephone"),
-                  trailing: Text("+977-1-5521531"),
-                )),
-                Card(
-                    child: ListTile(
-                  title: Text("Address"),
-                  trailing: Text("P.O. Box No. 1915, Pulchowk, Lalitpur"),
-                )),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Contact Us",
+                style: Theme.of(context).textTheme.headline2,
+              ),
             ),
-          ),
-        ],
+            Card(
+              child: Column(
+                children: [
+                  Card(
+                    child: FormPage(),
+                  ),
+                  // Card(
+                  //     child: ListTile(
+                  //   title: Text("Email"),
+                  //   trailing: Text("admin@ioe.edu.np"),
+                  // )),
+                  // Card(
+                  //     child: ListTile(
+                  //   title: Text("Telephone"),
+                  //   trailing: Text("+977-1-5521531"),
+                  // )),
+                  // Card(
+                  //     child: ListTile(
+                  //   title: Text("Address"),
+                  //   trailing: Text("P.O. Box No. 1915, Pulchowk, Lalitpur"),
+                  // )),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
