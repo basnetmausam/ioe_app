@@ -1,4 +1,5 @@
 import 'package:bulleted_list/bulleted_list.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class PhdPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

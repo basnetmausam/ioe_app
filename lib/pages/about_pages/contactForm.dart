@@ -95,8 +95,9 @@ class FormPage extends StatelessWidget {
                   minLines: 1,
                   maxLines: 5,
                 ),
+                SizedBox(height: 10),
                 ElevatedButton(
-                  child: Text('submit'),
+                  child: Text('Submit'),
                   onPressed: () {
                     // to reset the text inside textfield
 

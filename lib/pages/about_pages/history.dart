@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class HistoryPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

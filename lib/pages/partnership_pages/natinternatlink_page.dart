@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bulleted_list/bulleted_list.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class LinkPage extends StatelessWidget {
@@ -49,6 +50,7 @@ class LinkPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

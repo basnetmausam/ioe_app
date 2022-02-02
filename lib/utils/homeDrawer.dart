@@ -2,10 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 final Paadding = EdgeInsets.symmetric(horizontal: 20);
 Widget myDrawer(BuildContext context) {
   return Drawer(
+    backgroundColor: context.cardColor,
     child: Material(
       child: ListView(padding: Paadding, children: <Widget>[
         Container(

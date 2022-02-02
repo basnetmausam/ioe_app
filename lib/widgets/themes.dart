@@ -30,7 +30,7 @@ class MyTheme {
         ),
         bodyText1: TextStyle(
           fontSize: 20,
-          fontWeight: FontWeight.bold,
+          // fontWeight: FontWeight.bold,
           color: Colors.black,
         ),
         bodyText2: TextStyle(
@@ -42,7 +42,7 @@ class MyTheme {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: creamColor,
         selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey.shade600,
+        unselectedItemColor: Colors.grey.shade500,
       ),
       appBarTheme: AppBarTheme(
         color: creamColor,
@@ -78,7 +78,7 @@ class MyTheme {
           ),
           bodyText1: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.bold,
+            // fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
           bodyText2: TextStyle(
@@ -88,15 +88,15 @@ class MyTheme {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: darkBottom,
+          // backgroundColor: darkBottom,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.grey.shade600,
         ),
       );
 
   //Colors
-  static Color darkBottom = const Color(0xff0F0F29);
-  static Color darkCard = const Color(0xff483d81);
+  // static Color darkBottom = const Color(0xff0F0F29);
+  static Color darkCard = const Color(0xff302852);
   static Color creamColor = const Color(0xfff5f5f5);
-  static Color darkCanvas = const Color(0xff090638);
+  static Color darkCanvas = const Color(0xff0d002e);
 }

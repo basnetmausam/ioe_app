@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CentresPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class CentresPage extends StatelessWidget {
         ),
       ),
       backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Column(
         children: [
           Padding(

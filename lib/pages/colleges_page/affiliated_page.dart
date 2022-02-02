@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -11,10 +12,11 @@ class AffiliatedPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Colleges",
-          style: Theme.of(context).textTheme.headline1,
+          style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
       backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

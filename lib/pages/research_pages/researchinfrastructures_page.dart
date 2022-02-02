@@ -1,5 +1,6 @@
 import 'package:bulleted_list/bulleted_list.dart';
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class ResearchInfraPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class ResearchInfraPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

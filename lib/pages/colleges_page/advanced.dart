@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,10 +14,11 @@ class AdvancedCollegePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Advanced College of Engineering and Management",
-          style: Theme.of(context).textTheme.headline1,
+          style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
       backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

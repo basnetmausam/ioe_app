@@ -1,8 +1,7 @@
-
 //import 'dart:html';
 
-
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({Key? key}) : super(key: key);
@@ -16,6 +15,7 @@ class MessagePage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

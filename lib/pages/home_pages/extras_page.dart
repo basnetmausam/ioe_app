@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ExtraPage extends StatelessWidget {
@@ -8,6 +9,7 @@ class ExtraPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: context.canvasColor,
+        drawer: myDrawer(context),
         body: Material(
           child: Column(
             children: [

@@ -70,6 +70,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:ioe_app/utils/routes.dart';
 
@@ -81,11 +82,12 @@ class NewsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "About IOE",
-          style: Theme.of(context).textTheme.headline1,
+          "News & Bulletin",
+          style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
       backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Column(
         children: [
           const SizedBox(

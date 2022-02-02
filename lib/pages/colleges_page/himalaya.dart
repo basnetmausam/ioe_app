@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,25 +14,13 @@ class HimalayaCollegePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Himalaya College of Engineering",
-          style: Theme.of(context).textTheme.headline1,
+          style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
       backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/himalaya.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -42,8 +31,14 @@ class HimalayaCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 20,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/himalaya.jpg",
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
                       ),
                       Text(
                         "Himalaya College of Engineering (HCOE) is a private engineering college established in on 2057 BS (2000 AD). Affiliated to Tribhuvan University, it is conducting bachelor of engineering (BE) program of Institute of Engineering (IOE) in Computer Engineering, Electronics and Communication Engineering, Civil Engineering and Architecture. The aim of the college is to provide quality engineering education and produce competent engineering graduates. The college is producing qualified engineers since its establishment who are the backbone of development of the nation.",
@@ -141,23 +136,33 @@ class HimalayaCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Himalaya College',
-                              27.677014158115277, 85.33274926259102));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
+              // Card(
+              //     shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(12)),
+              //     child: ListTile(
+              //       onTap: () {
+              //         Navigator.pushNamed(context, MyRoutes.mapRoute,
+              //             arguments: Data('Himalaya College',
+              //                 27.677014158115277, 85.33274926259102));
+              //       },
+              //       title: const Padding(
+              //         padding: EdgeInsets.all(16.0), child: Text('Location'),
+              //         // Icon(Icons.directions_car_filled_outlined),
+              //       ),
+              //     )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Himalaya College', 27.677014158115277, 85.33274926259102));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }
