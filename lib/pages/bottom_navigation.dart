@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/pages/notice_page.dart';
 import 'package:ioe_app/pages/profile_page.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 import 'package:ioe_app/pages/google_login_controller.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+=======
+
 
 class NavigationPage extends StatelessWidget {
   const NavigationPage({Key? key}) : super(key: key);
