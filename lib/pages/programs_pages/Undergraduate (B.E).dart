@@ -70,7 +70,7 @@ class UnderGraduatePage extends StatelessWidget {
               img: 'assets/images/BEelectro.png',
               text: 'BE IN ELECTRONICS AND COMMUNICATION ENGINEERING',
               text1:
-                  'ELCETRONICS AND COMMUNICATION ENGINEERING This deparment or Course is based on Electronics and Communication Process {eg:VLSI(Very Large Scale Integration)Networking(TCP/IP(Transmission Control Protocol/Internet Protoco}and such that Signals based subjects(Digital signal processing(DSP))And Image Processing.'),
+                  'This deparment or Course is based on Electronics and Communication Process {eg:VLSI(Very Large Scale Integration)Networking(TCP/IP(Transmission Control Protocol/Internet Protoco}and such that Signals based subjects(Digital signal processing(DSP))And Image Processing.'),
           programBoxes(context,
               img: 'assets/images/BEgeomat.png',
               text: 'BE IN GEOMATICS ENGINEERING',
