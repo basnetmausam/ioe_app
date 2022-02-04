@@ -20,7 +20,7 @@ class UnderGraduatePage extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(6),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
