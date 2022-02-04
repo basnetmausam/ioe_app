@@ -21,19 +21,6 @@ class JanakpurCollegePage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/janakpur.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,8 +31,14 @@ class JanakpurCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/janakpur.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "Janakpur Engineering College (JEC) is affiliated to Tribhuvan University (TU), Nepal. Established in 2063 BS, it is producing qualified engineers who are the backbone of development of the nation. The aim of the College is to provide quality engineering education and produce competent engineering graduates. The bachelor of engineering of the Institute of Engineering (IOE), TU being implemented in the College are in Computer, Electronics and Communication, and Civil. The college has been managed by a strong team of professionals and academicians who possess enough experience in educational networks for a long time.",
@@ -125,23 +118,19 @@ class JanakpurCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Janakpur College',
-                              27.686693966381476, 85.3124371452807));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Janakpur College', 27.686693966381476, 85.3124371452807));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

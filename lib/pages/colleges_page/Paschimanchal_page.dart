@@ -21,19 +21,6 @@ class PaschimanchalPage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/paschimanchal.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,8 +31,14 @@ class PaschimanchalPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/paschimanchal.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "The Pashchimanchal Campus (Western Region Campus) is a constituent campus of Tribhuvan University, under Institute of Engineering. It was established in 2038 BS as a pioneer technical institution in western region from the Government sector. It is in fact only one constituent campus located in western part from Kathmandu under the Tribhuvan University for development of engineering manpower in various disciplines. It is located about 200 km west of Kathmandu spreading on 312 ropanis of land.",
@@ -156,23 +149,19 @@ class PaschimanchalPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Paschimanchal Campus',
-                              28.253872500076902, 83.97636345831485));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data('Paschimanchal Campus', 28.253872500076902,
+                  83.97636345831485));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

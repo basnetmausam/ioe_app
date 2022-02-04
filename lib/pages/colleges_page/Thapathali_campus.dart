@@ -21,23 +21,6 @@ class ThapathaliPage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/thapathali.jpg"),
-              // Text(
-              //   "Colleges",
-              //   style: Theme.of(context).textTheme.headline1,
-              // ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -48,8 +31,14 @@ class ThapathaliPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/thapathali.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "From 2029 B.S. Technical Training Institute (TTI) was renamed as Thapathali Campus (http://www.thapathalicampus.edu.np/) under Tribhuvan University (T.U.) and known as Institute of Engineering, Thapathali Campus thereafter. Campus started diploma in mechanical engineering and diploma in automobile engineering 2043 B.S. and later on, diploma in electronics engineering and diploma computer engineering started from 2058 B.S.",
@@ -159,23 +148,19 @@ class ThapathaliPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Thapathali Campus',
-                              27.694504749837627, 85.3190222245873));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Thapathali Campus', 27.694504749837627, 85.3190222245873));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

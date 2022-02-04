@@ -21,19 +21,6 @@ class KathfordCollegePage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/kathford.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,8 +31,14 @@ class KathfordCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/kathford.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "Established in 2003 and located at the heart of the city of Kathmandu, Kathford gives students access to outstanding faculty and excellent resources. Kathford is one of only a handful colleges affiliated to Tribhuvan University with diverse programs of Engineering and Management. A home to over 1000 students, Kathford has been producing highly competitive graduates and scholars since inception. Our strong alumni base, who have turned into market leaders, entrepreneurs and scholars, is among the reasons why Kathford is the best place to study Bachelors.",
@@ -114,23 +107,19 @@ class KathfordCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Kathford College', 27.67084538636398,
-                              85.34000164357525));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text('Location'),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Kathford College', 27.67084538636398, 85.34000164357525));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

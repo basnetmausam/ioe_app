@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HowPage extends StatelessWidget {
   const HowPage({Key? key}) : super(key: key);
@@ -40,10 +43,25 @@ class HowPage extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      Text(
-                        "Entrance examinations are conducted by Tribhuvan University, Institute of Engineering yearly for undergraduate and postgraduate intake. The entrance exam for the undergraduate program is highly competitive where 15000 students from all over Nepal compete.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the program should fill and submit the online Application Form within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the \nwebsite: http://entrance.ioe.edu.np",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text:
+                              "Entrance examinations are conducted by Tribhuvan University, Institute of Engineering yearly for undergraduate and postgraduate intake. The entrance exam for the undergraduate program is highly competitive where 15000 students from all over Nepal compete.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the program should fill and submit the online Application Form within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the \nwebsite: ",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " http://entrance.ioe.edu.np",
+                          style: TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap =
+                                () => launch('http://entrance.ioe.edu.np'),
+                        ),
+                      ])),
                     ],
                   ),
                 ),

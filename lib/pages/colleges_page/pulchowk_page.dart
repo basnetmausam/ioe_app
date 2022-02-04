@@ -24,17 +24,6 @@ class PulchowkPage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/pulchowk.jpg"),
-              // Text(
-              //   "Colleges",
-              //   style: Theme.of(context).textTheme.headline1,
-              // ),
-            ),
-          ),
           const SizedBox(
             height: 10,
           ),
@@ -48,8 +37,14 @@ class PulchowkPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/pulchowk.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "Pulchowk Campus is the central campus of the Institute of Engineering. It was established in 1972(2029 B.S.) as one of the constituent campus of the institute of Engineering and is situated at the heart of the Lalitpur city at Pulchowk. Initially it was started for the production of trade level manpower to fulfill the nation’s need in the field of Engineering. Pulchowk Campus offers bachelors, masters and Ph. D. programs in different areas of engineering. This campus is equipped with necessary laboratories, separate buildings for academic and administrative purposes and has become the center of excellence of engineering education in Nepal.",
@@ -245,23 +240,19 @@ class PulchowkPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Pulchowk Campus', 27.681086418552248,
-                              85.31851637218396));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Pulchowk Campus', 27.681086418552248, 85.31851637218396));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

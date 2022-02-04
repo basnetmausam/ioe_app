@@ -2,6 +2,8 @@ import 'package:bulleted_list/bulleted_list.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MscPage extends StatelessWidget {
   const MscPage({Key? key}) : super(key: key);
@@ -42,9 +44,31 @@ class MscPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "There is provision of admission through an Online Application.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the M.Sc. program should fill and submit the Application Form online within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the websites: \nhttp://entrance.ioe.edu.np\n\nThe application procedures are as follows:",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                          "There is provision of admission through an Online Application."),
+                      // to make clickable text
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text:
+                              " \n\nThe candidate willing to appear in the entrance examination to get enrollment into the M.Sc. program should fill and submit the Application Form online within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the websites:",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        TextSpan(
+                          text: " http://entrance.ioe.edu.np",
+                          style: const TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap =
+                                () => launch('http://entrance.ioe.edu.np'),
+                        ),
+                        TextSpan(
+                          text:
+                              "\n\nThe application procedures are as follows:",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ])),
+
                       const SizedBox(
                         height: 10,
                       ),
@@ -211,10 +235,29 @@ class MscPage extends StatelessWidget {
                         "Fee Structures",
                         style: Theme.of(context).textTheme.headline4,
                       ),
-                      Text(
-                        "\nPlease refer the latest booklet for the fee structure ( link here)\n\nThe candidates should pay extra charge for internet access and conference publication separately during admission as per Campus rule and any extra services as specified by TU.The given fee structure is for completing the minimum specified courses within two years of academic session. Candidates willing to secure extra credit courses or failing to complete the courses within the specified time frame should pay extra fee accordingly as per campus regulation.\n\nIn case, the admitted student needs to cancel his/her admission, following rules are applicablefor the reimbursement of fees:",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text:
+                              "\nPlease refer the latest booklet for the fee structure (",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        TextSpan(
+                          text: "link here",
+                          style: const TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => launch(
+                                'https://ioe.edu.np/admission/graduate-msc/#'),
+                        ),
+                        TextSpan(
+                          text:
+                              " )\n\nThe candidates should pay extra charge for internet access and conference publication separately during admission as per Campus rule and any extra services as specified by TU.The given fee structure is for completing the minimum specified courses within two years of academic session. Candidates willing to secure extra credit courses or failing to complete the courses within the specified time frame should pay extra fee accordingly as per campus regulation.\n\nIn case, the admitted student needs to cancel his/her admission, following rules are applicablefor the reimbursement of fees:",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ])),
+
                       BulletedList(
                         listItems: const [
                           "25% deduction from tuition fee of one semester prior to the start of class.",
