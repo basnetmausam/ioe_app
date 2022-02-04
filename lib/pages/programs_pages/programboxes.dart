@@ -18,21 +18,25 @@ Widget programBoxes(
         builder: (BuildContext context) {
           return ListView(
             children: [
-              const SizedBox(
-                height: 30,
+              // shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(10)),
+              // Center(
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(5.0),
+              //     child: Text(
+              //       text,
+              //       style: Theme.of(context).textTheme.headline3,
+              //     ),
+              //   ),
+              // ),
+
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20.0),
+                    topLeft: Radius.circular(20.0)),
+                child: Image.asset(img),
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    text,
-                    style: Theme.of(context).textTheme.headline3,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
+
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
