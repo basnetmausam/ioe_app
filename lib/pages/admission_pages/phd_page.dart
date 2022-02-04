@@ -2,6 +2,8 @@ import 'package:bulleted_list/bulleted_list.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PhdPage extends StatelessWidget {
   const PhdPage({Key? key}) : super(key: key);
@@ -42,13 +44,21 @@ class PhdPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Post Doctoral Research Program",
+                        "Post Doctoral Research Program \n\n",
                         style: Theme.of(context).textTheme.headline4,
                       ),
-                      Text(
-                        "\n\nPost Doctoral Research Study Guidelines 2019",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text: "Post Doctoral Research Study Guidelines 2019",
+                          style: const TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => launch(
+                                'https://ioe.edu.np/media/1454/ioe-phd-rules-reg-2019.pdf'),
+                        ),
+                      ])),
                       const SizedBox(
                         height: 30,
                       ),
@@ -57,10 +67,43 @@ class PhdPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline4,
                       ),
                       BulletedList(
-                        listItems: const [
-                          "IOE PhD Application Pack 2019",
-                          "IOE PhD Rules and Regulations 2019",
-                          "IOE PhD Re-registration Guidelines 2019"
+                        listItems: [
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Application Pack 2019",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1456/pages-from-ioe-phd-application-pack-2019.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Rules and Regulations 2019",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1454/ioe-phd-rules-reg-2019.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Re-registration Guidelines 2019",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1462/re-registration.pdf'),
+                            ),
+                          ])),
                         ],
                         style: Theme.of(context).textTheme.bodyText2,
                         bulletColor: context.primaryColor,
@@ -73,10 +116,43 @@ class PhdPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline4,
                       ),
                       BulletedList(
-                        listItems: const [
-                          "IOE PhD Application Pack 2017",
-                          "IOE PhD Rules and Regulations 2017",
-                          "IOE PhD Re-registration Guidelines 2017"
+                        listItems: [
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Application Pack 2017",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1156/ioe-phd-application-pack-2017.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Rules and Regulations 2017",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1157/ioe-phd-rules-reg-2017.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "SEEP PhD Fellowship Detail 2017",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1158/seep-phd-fellowship-detail.pdf'),
+                            ),
+                          ])),
                         ],
                         style: Theme.of(context).textTheme.bodyText2,
                         bulletColor: context.primaryColor,
@@ -89,10 +165,46 @@ class PhdPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline4,
                       ),
                       BulletedList(
-                        listItems: const [
-                          "IIOE PhD Rules & Regulations 2015",
-                          "IOE PhD Rules and Regulations 2015",
-                          "IOE PhD Application Forms 2015"
+                        listItems: [
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Rules & Regulations 2015",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1159/ioe-phd-rules-regulations-2015.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Scholarship Detail 2015",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1160/ioe-phd-scholarship-detail-2015.pdf'),
+                            ),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: "IOE PhD Application Forms 2015",
+                              style: const TextStyle(
+                                color: Colors.blue,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => launch(
+                                    'https://ioe.edu.np/media/1161/ioe-phd-application-forms-2015.pdf'),
+                            ),
+                          ])),
+                          // "IIOE PhD Rules & Regulations 2015",
+                          // "IOE PhD Rules and Regulations 2015",
+                          // "IOE PhD Application Forms 2015"
                         ],
                         style: Theme.of(context).textTheme.bodyText2,
                         bulletColor: context.primaryColor,

@@ -21,19 +21,6 @@ class KantipurCollegePage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/kantipur.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,8 +31,14 @@ class KantipurCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 20,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/kantipur.jpg",
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
                       ),
                       Text(
                         "KAN – Kantipur Engineering College, affiliated to TU has been imparting engineering education since 1998. The objective is to produce qualified and proficient engineers capable of facing the Engineering challenges of this modern era, where science and technology is a dominant force in every aspect of our lives. At the time of its foundation, quality engineering education was revolutionary in Nepal, whereas today it is an important necessity for our students to compete globally and KAN remains at the forefront in the pursuit of excellence in engineering education",
@@ -133,23 +126,33 @@ class KantipurCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Kantipur College',
-                              27.637268006646597, 85.33316581473974));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
+              // Card(
+              //     shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(12)),
+              //     child: ListTile(
+              //       onTap: () {
+              //         Navigator.pushNamed(context, MyRoutes.mapRoute,
+              //             arguments: Data('Kantipur College',
+              //                 27.637268006646597, 85.33316581473974));
+              //       },
+              //       title: const Padding(
+              //         padding: EdgeInsets.all(16.0), child: Text('Location'),
+              //         // Icon(Icons.directions_car_filled_outlined),
+              //       ),
+              //     )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Kantipur College', 27.637268006646597, 85.33316581473974));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

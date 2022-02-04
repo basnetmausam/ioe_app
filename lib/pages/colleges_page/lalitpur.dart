@@ -21,19 +21,6 @@ class LalitpurCollegePage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/lalitpur.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,8 +31,14 @@ class LalitpurCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/lalitpur.jpg",
+                        ),
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         "Lalitpur Engineering College (LEC) established in 2066 BS as the first engineering college with only one faculty (Civil Engineering) under the affiliation of Tribhuvan University is now competing with more than 50 engineering colleges within the Nepalese territory under six national universities. College management team and other personnel believe in competitive environment in the field of engineering education which definitely leads us to a global competitive market for technical manpower. Basic aim of LEC is to prepare Quality Engineers who could sell himself/herself in the world of professionalism. He/she will not only cater to the needs of the nations in solving its technical and management problems, but also will compete in the international job market successfully.",
@@ -144,23 +137,19 @@ class LalitpurCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Lalitpur College',
-                              27.680771788995624, 85.32566546750225));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Lalitpur College', 27.680771788995624, 85.32566546750225));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }
