@@ -48,9 +48,7 @@ class HowPage extends StatelessWidget {
                         TextSpan(
                           text:
                               "Entrance examinations are conducted by Tribhuvan University, Institute of Engineering yearly for undergraduate and postgraduate intake. The entrance exam for the undergraduate program is highly competitive where 15000 students from all over Nepal compete.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the program should fill and submit the online Application Form within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the \nwebsite: ",
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                         TextSpan(
                           text: " http://entrance.ioe.edu.np",
