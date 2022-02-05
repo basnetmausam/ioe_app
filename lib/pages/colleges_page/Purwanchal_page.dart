@@ -21,19 +21,6 @@ class PurwanchalPage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/purwanchal.jpg"),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -44,6 +31,12 @@ class PurwanchalPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/purwanchal.jpg",
+                        ),
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -161,23 +154,19 @@ class PurwanchalPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Purwanchal Campus',
-                              26.792863377433076, 87.29235591472175));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Purwanchal Campus', 26.792863377433076, 87.29235591472175));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

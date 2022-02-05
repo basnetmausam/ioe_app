@@ -21,23 +21,6 @@ class AdvancedCollegePage extends StatelessWidget {
       drawer: myDrawer(context),
       body: Column(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset("assets/images/advanced.jpg"),
-              // Text(
-              //   "Colleges",
-              //   style: Theme.of(context).textTheme.headline1,
-              // ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
           Flexible(
             child: ListView(children: [
               Card(
@@ -48,6 +31,12 @@ class AdvancedCollegePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/advanced.jpg",
+                        ),
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -128,23 +117,19 @@ class AdvancedCollegePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.mapRoute,
-                          arguments: Data('Advanced College ',
-                              27.69022552045282, 85.3125752392784));
-                    },
-                    title: const Padding(
-                      padding: EdgeInsets.all(16.0), child: Text('Location'),
-                      // Icon(Icons.directions_car_filled_outlined),
-                    ),
-                  )),
             ]),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.map_outlined),
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.mapRoute,
+              arguments: Data(
+                  'Advanced College ', 27.69022552045282, 85.3125752392784));
+        },
+        backgroundColor: context.accentColor,
+        hoverColor: context.accentColor,
       ),
     );
   }

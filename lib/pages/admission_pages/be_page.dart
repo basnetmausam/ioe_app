@@ -2,6 +2,8 @@ import 'package:bulleted_list/bulleted_list.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BEPage extends StatelessWidget {
   const BEPage({Key? key}) : super(key: key);
@@ -59,15 +61,44 @@ class BEPage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      Text(
-                        "BE/BArch Booklet 2075 (Entrance Information & Admission Regulations)",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text: "BE/BArch Booklet 2075",
+                          style: Theme.of(context).textTheme.bodyText2,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => launch(
+                                'http://entrance.ioe.edu.np/notice/download?filename=Entrance%20Information.pdf&contentType=pdf'),
+                        ),
+                        TextSpan(
+                          text:
+                              "(Entrance Information & Admission Regulations)",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ])),
                       const SizedBox(
                         height: 30,
                       ),
+                      // to make clickable text
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text:
+                              "There is provision of admission through an Online Application.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the program should fill and submit the online Application Form within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the website:",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        TextSpan(
+                          text: " http://entrance.ioe.edu.np",
+                          style: const TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap =
+                                () => launch('http://entrance.ioe.edu.np'),
+                        ),
+                      ])),
                       Text(
-                        "There is provision of admission through an Online Application.\n\nThe candidate willing to appear in the entrance examination to get enrollment into the program should fill and submit the online Application Form within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the website: \nhttp://entrance.ioe.edu.np\n\nThe application procedures are as follows:",
+                        "\n\nThe application procedures are as follows:",
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                       const SizedBox(
@@ -111,10 +142,28 @@ class BEPage extends StatelessWidget {
                         "Provision of Admit Cards",
                         style: Theme.of(context).textTheme.headline4,
                       ),
-                      Text(
-                        "\nAdmit card can be downloaded from the website:\nhttp://entrance.ioe.edu.np. Applicants should bring the admit card and the mentioned original identification document with him/her during the entrance examination.\nWithout original ID document and color printed admit card, applicant will not be allowed to appear in the entrance examination.",
-                        style: Theme.of(context).textTheme.bodyText2,
-                      ),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text:
+                              "\nAdmit card can be downloaded from the website:",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        TextSpan(
+                          text: " http://entrance.ioe.edu.np",
+                          style: const TextStyle(
+                            color: Colors.blue,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap =
+                                () => launch('http://entrance.ioe.edu.np'),
+                        ),
+                        TextSpan(
+                          text:
+                              ". Applicants should bring the admit card and the mentioned original identification document with him/her during the entrance examination.\nWithout original ID document and color printed admit card, applicant will not be allowed to appear in the entrance examination.",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ])),
                       const SizedBox(
                         height: 30,
                       ),
