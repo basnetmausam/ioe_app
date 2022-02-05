@@ -18,8 +18,6 @@ Widget programBoxes(
         builder: (BuildContext context) {
           return ListView(
             children: [
-              // shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(10)),
               // Center(
               //   child: Padding(
               //     padding: const EdgeInsets.all(5.0),
@@ -31,7 +29,7 @@ Widget programBoxes(
               // ),
 
               ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(20.0),
                     topLeft: Radius.circular(20.0)),
                 child: Image.asset(img),
