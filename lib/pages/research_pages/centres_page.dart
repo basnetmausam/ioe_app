@@ -34,13 +34,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -72,13 +73,14 @@ class CentresPage extends StatelessWidget {
               Card(
                 child: ListTile(
                   onTap: () => showModalBottomSheet(
+                      isScrollControlled: true,
                       shape: const RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.vertical(top: Radius.circular(20))),
                       context: context,
                       builder: (BuildContext context) {
                         return Column(
-                          mainAxisSize: MainAxisSize.max,
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             const SizedBox(
                               height: 30,
@@ -110,13 +112,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -146,13 +149,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -186,13 +190,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -222,13 +227,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -258,13 +264,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -294,13 +301,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -330,13 +338,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
@@ -370,13 +379,14 @@ class CentresPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () => showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
                     builder: (BuildContext context) {
                       return Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
                             height: 30,
