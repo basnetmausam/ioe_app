@@ -14,10 +14,10 @@ class GlancePage extends StatelessWidget {
         ),
       ),
       drawer: myDrawer(context),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            child: Card(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
               child: Padding(
@@ -119,9 +119,9 @@ class GlancePage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

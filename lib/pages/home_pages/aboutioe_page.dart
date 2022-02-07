@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
-import 'package:ioe_app/widgets/sliding_bottom.dart';
-import 'package:sliding_sheet/sliding_sheet.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AboutPage extends StatelessWidget {
