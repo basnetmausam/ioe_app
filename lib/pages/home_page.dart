@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,13 +19,26 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Image.asset(
-              "assets/images/logo_with_text.png",
+              Theme.of(context).brightness == Brightness.dark
+                  ? "assets/images/logo_dark.png"
+                  : "assets/images/logo_light.png",
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Container(
+          //     height: 120,
+          //     decoration: const BoxDecoration(
+          //       image: DecorationImage(
+          //         image: AssetImage('assets/images/ioe_app.png'),
+          //         fit: BoxFit.fitHeight,
+          //         alignment: Alignment.topLeft,
+          //       ),
+          //       // shape: BoxShape.circle,
+          //     ),
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.all(24.0),
             child: Align(
@@ -35,9 +49,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          // const SizedBox(
-          //   height: 20,
-          // ),
+
           Flexible(
               child: GridView.count(
             crossAxisCount: 2,
@@ -54,8 +66,12 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.info_outline),
-                      Text('About IOE', style: context.textTheme.bodyText1),
+                      const Icon(
+                        FontAwesomeIcons.infoCircle,
+                        size: 25,
+                        // color: context.accentColor,
+                      ),
+                      Text('About IOE', style: context.textTheme.headline5),
                     ],
                   ),
                   decoration: BoxDecoration(
@@ -67,7 +83,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -78,10 +94,10 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.event),
+                      const Icon(FontAwesomeIcons.book),
                       Text(
                         'Programs',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -94,7 +110,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -106,11 +122,11 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        Icons.school,
+                        FontAwesomeIcons.university,
                       ),
                       Text(
                         'Colleges',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -123,7 +139,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -134,10 +150,10 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.collections_bookmark),
+                      const Icon(FontAwesomeIcons.fileSignature),
                       Text(
                         'Admission',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -150,7 +166,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -162,11 +178,11 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        Icons.person_search,
+                        FontAwesomeIcons.searchengin,
                       ),
                       Text(
                         'Research',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -179,7 +195,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -190,10 +206,10 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.insert_link),
+                      const Icon(FontAwesomeIcons.handshake),
                       Text(
                         'Partnership',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -206,7 +222,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -217,8 +233,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.menu_book_outlined),
-                      Text('News', style: context.textTheme.bodyText1),
+                      const Icon(FontAwesomeIcons.newspaper),
+                      Text('News', style: context.textTheme.headline5),
                     ],
                   ),
                   decoration: BoxDecoration(
@@ -230,7 +246,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
               InkWell(
@@ -244,7 +260,7 @@ class HomePage extends StatelessWidget {
                       const Icon(Icons.add_comment_outlined),
                       Text(
                         'Extras',
-                        style: context.textTheme.bodyText1,
+                        style: context.textTheme.headline5,
                       ),
                     ],
                   ),
@@ -257,7 +273,7 @@ class HomePage extends StatelessWidget {
                           blurRadius: 6.0,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(16)),
                 ),
               ),
             ],

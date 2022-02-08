@@ -28,6 +28,11 @@ class MyTheme {
           fontWeight: FontWeight.bold,
           color: Colors.black,
         ),
+        headline5: TextStyle(
+          fontSize: 17,
+          // fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
         bodyText1: TextStyle(
           fontSize: 20,
           // fontWeight: FontWeight.bold,
@@ -74,6 +79,11 @@ class MyTheme {
           headline4: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          headline5: TextStyle(
+            fontSize: 17,
+            // fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
           bodyText1: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/pages/notice_page.dart';
 import 'package:ioe_app/pages/profile_page.dart';
@@ -44,15 +45,24 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              FontAwesomeIcons.home,
+              size: 17,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notification_add),
+            icon: Icon(
+              FontAwesomeIcons.bell,
+              size: 17,
+            ),
             label: 'Notices',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
+            icon: Icon(
+              FontAwesomeIcons.user,
+              size: 17,
+            ),
             label: 'Profile',
           ),
         ],

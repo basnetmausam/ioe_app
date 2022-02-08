@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:nb_utils/nb_utils.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ResearchPage extends StatelessWidget {
@@ -15,97 +17,94 @@ class ResearchPage extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
-      backgroundColor: context.canvasColor,
+      // backgroundColor: context.canvasColor,
       drawer: myDrawer(context),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 60,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/duotone.png"),
+            fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Research",
-                style: Theme.of(context).textTheme.headline1,
-              ),
+        ),
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 80,
             ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Flexible(
-              child: ListView(
-            children: [
-              Card(
-                  child: ListTile(
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.centresRoute);
                 },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "Centres",
-                  ),
+                leading: const Icon(Ionicons.locate_outline),
+                title: Text(
+                  "Centres",
                 ),
-              )),
-              Card(
+              ),
+            )),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   onTap: () {
                     Navigator.pushNamed(context, MyRoutes.researchinfraRoute);
                   },
-                  title: const Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text("Research Infrastructures"),
-                  ),
+                  leading: const Icon(Ionicons.laptop_outline),
+
+                  title: Text("Research Infrastructures"),
                   // subtitle: Text("ohhh hoooo"),
                 ),
               ),
-              Card(
-                  child: ListTile(
+            ),
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.faculresRoute);
                 },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("Faculty Researches"),
-                ),
-              )),
-              Card(
-                  child: ListTile(
+                leading: const Icon(Ionicons.people_outline),
+                title: Text("Faculty Researches"),
+              ),
+            )),
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.workshopRoute);
                 },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("Workshops"),
-                ),
-              )),
-              Card(
-                  child: ListTile(
+                leading: const Icon(Ionicons.checkmark_done_circle_outline),
+                title: Text("Workshops"),
+              ),
+            )),
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.seminarsRoute);
                 },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("Seminars & Conferences"),
-                ),
-              )),
-              Card(
-                  child: ListTile(
+                leading: const Icon(Ionicons.people_circle_outline),
+                title: Text("Seminars & Conferences"),
+              ),
+            )),
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.publicationRoute);
                 },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("Publications"),
-                ),
-              )),
-            ],
-            padding: const EdgeInsets.all(10),
-          ))
-        ],
+                leading: const Icon(Ionicons.book_outline),
+                title: Text("Publications"),
+              ),
+            )),
+          ],
+          padding: const EdgeInsets.all(10),
+        ),
       ),
     );
   }
