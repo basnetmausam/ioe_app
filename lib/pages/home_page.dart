@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -39,15 +40,18 @@ class HomePage extends StatelessWidget {
           //     ),
           //   ),
           // ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "IOE App",
-                style: Theme.of(context).textTheme.headline1,
-              ),
-            ),
+          // Padding(
+          //   padding: const EdgeInsets.all(24.0),
+          //   child: Align(
+          //     alignment: Alignment.topLeft,
+          //     child: Text(
+          //       "IOE App",
+          //       style: Theme.of(context).textTheme.headline1,
+          //     ),
+          //   ),
+          // ),
+          SizedBox(
+            height: 100,
           ),
 
           Flexible(
@@ -67,8 +71,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        FontAwesomeIcons.infoCircle,
-                        size: 25,
+                        Ionicons.information_circle, size: 30,
                         // color: context.accentColor,
                       ),
                       Text('About IOE', style: context.textTheme.headline5),
@@ -94,7 +97,10 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(FontAwesomeIcons.book),
+                      const Icon(
+                        Ionicons.book,
+                        size: 30,
+                      ),
                       Text(
                         'Programs',
                         style: context.textTheme.headline5,
@@ -150,7 +156,10 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(FontAwesomeIcons.fileSignature),
+                      const Icon(
+                        Ionicons.today,
+                        size: 30,
+                      ),
                       Text(
                         'Admission',
                         style: context.textTheme.headline5,
@@ -206,7 +215,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(FontAwesomeIcons.handshake),
+                      const Icon(FontAwesomeIcons.solidHandshake),
                       Text(
                         'Partnership',
                         style: context.textTheme.headline5,
@@ -233,8 +242,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(FontAwesomeIcons.newspaper),
-                      Text('News', style: context.textTheme.headline5),
+                      const Icon(FontAwesomeIcons.solidNewspaper),
+                      Text('News & Bulletin',
+                          style: context.textTheme.headline5),
                     ],
                   ),
                   decoration: BoxDecoration(

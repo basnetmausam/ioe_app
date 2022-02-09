@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
-import 'package:velocity_x/src/extensions/context_ext.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // Widget showSheet() {
 //   return SlidingSheet(
@@ -35,10 +34,19 @@ Widget buildSheet1(BuildContext context, SheetState state) => Material(
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                "Center for Applied Research and Development (CARD) is an autonomous research and development center within the IOE. The main objective of the CARD is to carry out the primary mandate of the Institute of Engineering (IOE) to educate students and to impart new knowledge by creating a vigorous and highly visible research environment. CARD has made an effort to establish a research culture and develop leadership at the IOE. It supports all kinds of scholarly activities: fundamental research, applied research and development contract research in government, non-government and international agencies. It capitalizes on the wide range of multidisciplinary in house expertise and capabilities of the IOE.\n\nWebsite of CARD",
+                "Center for Applied Research and Development (CARD) is an autonomous research and development center within the IOE. The main objective of the CARD is to carry out the primary mandate of the Institute of Engineering (IOE) to educate students and to impart new knowledge by creating a vigorous and highly visible research environment. CARD has made an effort to establish a research culture and develop leadership at the IOE. It supports all kinds of scholarly activities: fundamental research, applied research and development contract research in government, non-government and international agencies. It capitalizes on the wide range of multidisciplinary in house expertise and capabilities of the IOE.\n\n",
                 style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
+            InkWell(
+              onTap: () {
+                launch('https://card.ioe.edu.np/');
+              },
+              child: const Text(
+                'Website of CARD',
+                style: TextStyle(color: Colors.blue),
+              ),
+            )
           ],
         ),
       ),
