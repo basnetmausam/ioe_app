@@ -94,8 +94,11 @@
 //   }
 // }
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:ioe_app/model/newsmodel.dart';
+import 'package:ioe_app/pages/newsbulletin_pages/news.dart';
 import 'package:ioe_app/utils/newsdata.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -139,11 +142,20 @@ class _NewssPageState extends State<NewssPage> {
                 physics: const ClampingScrollPhysics(),
                 shrinkWrap: true, // add this otherwise an error
                 itemBuilder: (context, index) {
-                  return NewsTemplate(
-                    urlToImage: news[index].image_url,
-                    title: news[index].title,
-                    description: news[index].description,
-                    url: news[index].link,
+                  final newsdata = news[index];
+                  return InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                NewsDetailPage(news: newsdata))),
+                    child: NewsTemplate(
+                      urlToImage: news[index].image_url,
+                      title: news[index].title,
+                      description: news[index].description,
+                      url: news[index].link,
+                      content: news[index].full_description,
+                    ),
                   );
                 },
               ),
@@ -153,47 +165,70 @@ class _NewssPageState extends State<NewssPage> {
 }
 
 class NewsTemplate extends StatelessWidget {
-  String title, description, urlToImage, url;
+  String title, description, urlToImage, url, content;
   NewsTemplate(
       {required this.title,
       required this.description,
       required this.urlToImage,
-      required this.url});
+      required this.url,
+      required this.content});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16),
-      child: Card(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: Image.network(
-                    urlToImage,
-                    width: 380,
-                    height: 200,
-                    fit: BoxFit.cover,
+      margin: const EdgeInsets.all(16),
+      child: Hero(
+        tag: 404,
+        child: Card(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
+                  child: Container(
+                    // width: double.infinity,
+                    color: context.accentColor.withOpacity(0.4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.calendar_today_rounded,
+                          size: 20,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "2022/02/19",
+                          style: Theme.of(context).textTheme.bodyText2,
+                        )
+                      ],
+                    ).py4().px12(),
                   )),
-            ),
-            Text(
-              title,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                  color: Colors.black),
-            ),
-            SizedBox(height: 8),
-            Text(
-              description,
-              style: TextStyle(fontSize: 15.0, color: Colors.grey[800]),
-            ),
-            SizedBox(
-              height: 10,
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15.0,
+                  ),
+                ),
+              ),
+              // const SizedBox(height: 8),
+              // Text(
+              //   description,
+              //   style: TextStyle(fontSize: 15.0, color: Colors.grey[800]),
+              // ),
+              const SizedBox(
+                height: 10,
+              )
+            ],
+          ),
         ),
       ),
     );

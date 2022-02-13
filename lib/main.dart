@@ -23,6 +23,7 @@ import 'package:ioe_app/pages/bottom_navigation.dart';
 // college
 import 'package:ioe_app/pages/colleges_page/affiliated_page.dart';
 import 'package:ioe_app/pages/colleges_page/constituent_page.dart';
+import 'package:ioe_app/pages/newsbulletin_pages/news.dart';
 import 'package:ioe_app/widgets/map.dart';
 // constituent
 import 'package:ioe_app/pages/colleges_page/Thapathali_campus.dart';

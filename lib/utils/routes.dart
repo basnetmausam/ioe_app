@@ -84,4 +84,7 @@ class MyRoutes {
   static String researchinfraRoute = "/research/research-infractures";
   static String seminarsRoute = "/research/seminars";
   static String workshopRoute = "/research/workshop";
+
+  // News Data Route
+  static String newsshowRoute = "/news&bulletin/news";
 }

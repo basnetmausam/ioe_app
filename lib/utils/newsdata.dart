@@ -8,7 +8,7 @@ class NewsHaru {
 
   Future<void> getNews() async {
     var url = Uri.parse(
-        "https://newsdata.io/api/1/news?apikey=pub_4416512438668b8368dd5017e3e252035910&q=nft  ");
+        "https://newsdata.io/api/1/news?apikey=pub_4416512438668b8368dd5017e3e252035910&category=entertainment");
 
     var response = await http.get(url);
 
@@ -16,12 +16,15 @@ class NewsHaru {
 
     if (jsonData['status'] == 'success') {
       jsonData['results'].forEach((element) {
-        if (element['image_url'] != null && element["description"] != null) {
+        if (element['image_url'] != null &&
+            element["description"] != null &&
+            element['full_description'] != null) {
           NewsModel newsmodel = NewsModel(
               title: element['title'],
               description: element['description'],
               link: element['link'],
-              image_url: element['image_url']);
+              image_url: element['image_url'],
+              full_description: element['full_description']);
 
           dataToBeSavedIn.add(newsmodel);
         }
