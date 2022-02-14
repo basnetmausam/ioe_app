@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:ioe_app/utils/routes.dart';
 
@@ -17,65 +18,40 @@ class NewsPage extends StatelessWidget {
       ),
       backgroundColor: context.canvasColor,
       drawer: myDrawer(context),
-      body: Column(
+      body: ListView(
         children: [
-          const SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "News & Bulletin",
-                style: Theme.of(context).textTheme.headline1,
-              ),
+          80.heightBox,
+          Card(
+              child: ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, MyRoutes.newssRoute);
+            },
+            leading: const Icon(Ionicons.newspaper_outline),
+            title: const Text(
+              "News",
             ),
+          ).p8()),
+          Card(
+            child: ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.eventsRoute);
+              },
+              leading: const Icon(Ionicons.calendar_clear_outline),
+
+              title: const Text("Events"),
+              // subtitle: Text("ohhh hoooo"),
+            ).p8(),
           ),
-          const SizedBox(
-            height: 40,
-          ),
-          Flexible(
-              child: ListView(
-            children: [
-              Card(
-                  child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.newssRoute);
-                },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "News",
-                  ),
-                ),
-              )),
-              Card(
-                child: ListTile(
-                  onTap: () {
-                    Navigator.pushNamed(context, MyRoutes.eventsRoute);
-                  },
-                  title: const Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text("Events"),
-                  ),
-                  // subtitle: Text("ohhh hoooo"),
-                ),
-              ),
-              Card(
-                  child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.ioemonthlyRoute);
-                },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text("IOE Monthly Bulletin"),
-                ),
-              )),
-            ],
-            padding: const EdgeInsets.all(10),
-          ))
+          Card(
+              child: ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, MyRoutes.ioemonthlyRoute);
+            },
+            leading: const Icon(Ionicons.radio_outline),
+            title: const Text("IOE Monthly Bulletin"),
+          ).p8()),
         ],
+        padding: const EdgeInsets.all(10),
       ),
     );
   }

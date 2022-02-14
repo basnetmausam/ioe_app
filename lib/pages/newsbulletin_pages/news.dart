@@ -19,11 +19,14 @@ class NewsDetailPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  height: 100,
-                  decoration: BoxDecoration(),
-                  child: Image.asset("assets/images/sammy.png"),
+                Flexible(
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(),
+                    child: Image.asset("assets/images/sammy.png"),
+                  ),
                 ),
+                20.heightBox,
                 news.description.text.bold.make().px16(),
                 10.heightBox,
                 ElevatedButton(onPressed: () {}, child: Text("Read More"))

@@ -37,7 +37,7 @@ class HimalayaCollegePage extends StatelessWidget {
                           "assets/images/himalaya.jpg",
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Text(
@@ -130,7 +130,7 @@ class HimalayaCollegePage extends StatelessWidget {
                         onTap: () {
                           launch('https://www.hcoe.edu.np/');
                         },
-                        child: Text('https://www.hcoe.edu.np/'),
+                        child: const Text('https://www.hcoe.edu.np/'),
                       )
                     ],
                   ),

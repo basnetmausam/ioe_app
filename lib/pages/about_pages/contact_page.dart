@@ -35,17 +35,17 @@ class ContactPage extends StatelessWidget {
                 Card(
                   child: FormPage(),
                 ),
-                Card(
+                const Card(
                     child: ListTile(
                   title: Text("Email"),
                   trailing: Text("admin@ioe.edu.np"),
                 )),
-                Card(
+                const Card(
                     child: ListTile(
                   title: Text("Telephone"),
                   trailing: Text("+977-1-5521531"),
                 )),
-                Card(
+                const Card(
                     child: ListTile(
                   title: Text("Address"),
                   trailing: Text("P.O. Box No. 1915, Pulchowk, Lalitpur"),

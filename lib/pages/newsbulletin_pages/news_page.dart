@@ -94,8 +94,6 @@
 //   }
 // }
 
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:ioe_app/model/newsmodel.dart';
 import 'package:ioe_app/pages/newsbulletin_pages/news.dart';
@@ -136,29 +134,27 @@ class _NewssPageState extends State<NewssPage> {
           ? const Center(
               child: CircularProgressIndicator(),
             )
-          : Container(
-              child: ListView.builder(
-                itemCount: news.length,
-                physics: const ClampingScrollPhysics(),
-                shrinkWrap: true, // add this otherwise an error
-                itemBuilder: (context, index) {
-                  final newsdata = news[index];
-                  return InkWell(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                NewsDetailPage(news: newsdata))),
-                    child: NewsTemplate(
-                      urlToImage: news[index].image_url,
-                      title: news[index].title,
-                      description: news[index].description,
-                      url: news[index].link,
-                      content: news[index].full_description,
-                    ),
-                  );
-                },
-              ),
+          : ListView.builder(
+              itemCount: news.length,
+              physics: const ClampingScrollPhysics(),
+              shrinkWrap: true, // add this otherwise an error
+              itemBuilder: (context, index) {
+                final newsdata = news[index];
+                return InkWell(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              NewsDetailPage(news: newsdata))),
+                  child: NewsTemplate(
+                    urlToImage: news[index].image_url,
+                    title: news[index].title,
+                    description: news[index].description,
+                    url: news[index].link,
+                    content: news[index].full_description,
+                  ),
+                );
+              },
             ),
     );
   }
@@ -185,7 +181,7 @@ class NewsTemplate extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ClipRRect(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     bottomRight: Radius.circular(10),
                   ),
