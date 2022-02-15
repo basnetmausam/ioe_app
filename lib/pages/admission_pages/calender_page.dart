@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
-// import 'package:ioe_app/pages/admission_pages/calendar_event.dart';
-import 'package:ioe_app/pages/admission_pages/eventDatasource.dart';
-import 'package:ioe_app/pages/admission_pages/taskwidget.dart';
-import 'package:provider/provider.dart';
-import 'package:syncfusion_flutter_calendar/calendar.dart';
-import 'package:velocity_x/velocity_x.dart';
-import 'package:ioe_app/utils/routes.dart';
+// import 'package:flutter/material.dart';
+// // import 'package:ioe_app/pages/admission_pages/calendar_event.dart';
+// import 'package:ioe_app/pages/admission_pages/eventDatasource.dart';
+// import 'package:ioe_app/pages/admission_pages/taskwidget.dart';
+// import 'package:provider/provider.dart';
+// import 'package:syncfusion_flutter_calendar/calendar.dart';
+// import 'package:velocity_x/velocity_x.dart';
+// import 'package:ioe_app/utils/routes.dart';
 
-import 'eventProvider.dart';
+// import 'eventProvider.dart';
 
 // class CalenderPage extends StatefulWidget {
 //   const CalenderPage({Key? key}) : super(key: key);
@@ -146,39 +146,39 @@ import 'eventProvider.dart';
 //   }
 // }
 
-class CalenderPage extends StatelessWidget {
-  const CalenderPage({Key? key}) : super(key: key);
+// class CalenderPage extends StatelessWidget {
+//   const CalenderPage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    final events = Provider.of<EventProvider>(context).events;
+//   @override
+//   Widget build(BuildContext context) {
+//     final events = Provider.of<EventProvider>(context).events;
 
-    EventProvider provider;
-    return Scaffold(
-      appBar: AppBar(
-          title: Text("IOE Calender"),
-          centerTitle: true,
-          backgroundColor: context.accentColor),
-      body: SfCalendar(
-        view: CalendarView.month,
-        dataSource: EventDataSource(events),
-        initialSelectedDate: DateTime.now(),
-        onTap: (details) {
-          final provider = Provider.of<EventProvider>(context, listen: false);
-          provider.setDate(details.date!);
-          showModalBottomSheet(
-            context: context,
-            builder: (context) => const TasksWidget(),
-          );
-        },
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.pushNamed(context, MyRoutes.eventEditingRoute);
-        },
-        label: Text("Add Events"),
-        icon: Icon(Icons.add),
-      ),
-    );
-  }
-}
+//     EventProvider provider;
+//     return Scaffold(
+//       appBar: AppBar(
+//           title: Text("IOE Calender"),
+//           centerTitle: true,
+//           backgroundColor: context.accentColor),
+//       body: SfCalendar(
+//         view: CalendarView.month,
+//         dataSource: EventDataSource(events),
+//         initialSelectedDate: DateTime.now(),
+//         onTap: (details) {
+//           final provider = Provider.of<EventProvider>(context, listen: false);
+//           provider.setDate(details.date!);
+//           showModalBottomSheet(
+//             context: context,
+//             builder: (context) => const TasksWidget(),
+//           );
+//         },
+//       ),
+//       floatingActionButton: FloatingActionButton.extended(
+//         onPressed: () {
+//           Navigator.pushNamed(context, MyRoutes.eventEditingRoute);
+//         },
+//         label: Text("Add Events"),
+//         icon: Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
