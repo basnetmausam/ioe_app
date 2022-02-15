@@ -5,8 +5,8 @@ import 'package:nepali_utils/nepali_utils.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 /// Calendar Picker Example
-class CalendarBEWidget extends StatelessWidget {
-  CalendarBEWidget({Key? key}) : super(key: key);
+class CalendarMSCWidget extends StatelessWidget {
+  CalendarMSCWidget({Key? key}) : super(key: key);
 
   final ValueNotifier<NepaliDateTime> _selectedDate =
       ValueNotifier(NepaliDateTime.now());
@@ -14,47 +14,65 @@ class CalendarBEWidget extends StatelessWidget {
   /// Events
   final List<Event> events = [
     Event(
-        date: NepaliDateTime.parse("2078-01-16"),
-        eventTitles: ['Start of class All year part-I']),
+        date: NepaliDateTime.parse("2079-01-01"),
+        eventTitles: ['Start semester break (II/I)']),
     Event(
-        date: NepaliDateTime.parse("2078-05-20"),
-        eventTitles: ['End of Regular class All year part-I']),
+        date: NepaliDateTime.parse("2079-01-15"),
+        eventTitles: ['End semester break (II/I)']),
     Event(
-        date: NepaliDateTime.parse("2078-05-21"),
-        eventTitles: ['Start Regular Exam All year part-I']),
+        date: NepaliDateTime.parse("2079-01-16"),
+        eventTitles: ['Start Regular Class (II/II)']),
     Event(
-        date: NepaliDateTime.parse("2078-06-20"),
-        eventTitles: ['End of Regular Exam All year part-I']),
+        date: NepaliDateTime.parse("2079-01-20"),
+        eventTitles: ['Class End (I/I)']),
     Event(
-        date: NepaliDateTime.parse("2078-06-21"),
-        eventTitles: ['Start Dashain Vacation']),
+        date: NepaliDateTime.parse("2079-01-23"),
+        eventTitles: ['Start Exam (I/I)']),
     Event(
-        date: NepaliDateTime.parse("2078-07-03"),
-        eventTitles: ['End of Dashain Vacation']),
+        date: NepaliDateTime.parse("2079-02-07"),
+        eventTitles: ['End Exam (I/I)']),
     Event(
-        date: NepaliDateTime.parse("2078-07-04"),
-        eventTitles: ['Start of Back Exam all year part I']),
+        date: NepaliDateTime.parse("2079-02-10"),
+        eventTitles: ['Start Regular Class (I/II)']),
     Event(
-        date: NepaliDateTime.parse("2078-07-30"),
-        eventTitles: ['End of Back Exam all year part I']),
+        date: NepaliDateTime.parse("2079-04-30"),
+        eventTitles: ['End of Regular Class (I/II & II/II)']),
     Event(
-        date: NepaliDateTime.parse("2078-07-18"),
-        eventTitles: ['Start Tihar Vacation']),
+        date: NepaliDateTime.parse("2079-05-10"),
+        eventTitles: ['Start Exam (I/II & II/II)']),
     Event(
-        date: NepaliDateTime.parse("2078-07-24"),
-        eventTitles: ['End Tihar Vacation']),
+        date: NepaliDateTime.parse("2079-06-09"),
+        eventTitles: ['End Exam (I/II & II/II)']),
+    Event(
+        date: NepaliDateTime.parse("2079-06-10"),
+        eventTitles: ['Start Dashain vacation']),
+    Event(
+        date: NepaliDateTime.parse("2079-07-15"),
+        eventTitles: ['End Dashain & Tihar Vacation']),
     Event(
         date: NepaliDateTime.parse("2078-08-01"),
-        eventTitles: ['Start of class All year part-II']),
+        eventTitles: ['Start Regular class (II/I)']),
+    Event(
+        date: NepaliDateTime.parse("2078-08-26"),
+        eventTitles: ['Start M.Sc Entrance']),
+    Event(
+        date: NepaliDateTime.parse("2078-08-27"),
+        eventTitles: ['End M.Sc Entrance']),
+    Event(
+        date: NepaliDateTime.parse("2078-10-26"),
+        eventTitles: ['Start Class (I/I)']),
+    Event(
+        date: NepaliDateTime.parse("2078-11-01"),
+        eventTitles: ['Start Thesis Defence (Chance)']),
     Event(
         date: NepaliDateTime.parse("2078-11-30"),
-        eventTitles: ['End of class All year part-II']),
+        eventTitles: ['End Thesis Defence (Chance)']),
     Event(
         date: NepaliDateTime.parse("2078-12-01"),
-        eventTitles: ['Start of Regular Exam all year part-II']),
+        eventTitles: ['Start of Regular Exam (II/I)']),
     Event(
         date: NepaliDateTime.parse("2078-12-30"),
-        eventTitles: ['End of Regular Exam all year part-II']),
+        eventTitles: ['End of Regular Exam (II/I)']),
   ];
 
   @override
@@ -81,15 +99,10 @@ class CalendarBEWidget extends StatelessWidget {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.orange.withOpacity(0.5),
-                          Colors.red.withOpacity(0.5)
-                        ]),
-                        shape: BoxShape.circle,
-                      ),
+                      width: 6,
+                      height: 6,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.purple),
                     ),
                   )
               ],
@@ -122,7 +135,6 @@ class CalendarBEWidget extends StatelessWidget {
                   child: Text('No Events'),
                 );
               }
-
               return ListView.separated(
                 itemCount: event.eventTitles.length,
                 itemBuilder: (context, index) => ListTile(

@@ -117,7 +117,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.beRoute: (context) => const BEPage(),
         MyRoutes.mscRoute: (context) => const MscPage(),
         MyRoutes.phdRoute: (context) => const PhdPage(),
-        // MyRoutes.calenderRoute: (context) => const CalenderPage(),
+        MyRoutes.calenderRoute: (context) => const CalendarPage(),
         // MyRoutes.eventEditingRoute: (context) => const EventEditingPage(),
 
         MyRoutes.examcontrolRoute: (context) => const ExamPage(),
