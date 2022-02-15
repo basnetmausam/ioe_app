@@ -13,26 +13,27 @@ class NewsDetailPage extends StatelessWidget {
       appBar: AppBar(),
       backgroundColor: context.canvasColor,
       body: SafeArea(
-        child: Hero(
-          tag: 404,
-          child: Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Flexible(
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(),
-                    child: Image.asset("assets/images/sammy.png"),
-                  ),
+        child: Card(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Flexible(
+                child: Container(
+                  height: 100,
+                  decoration: BoxDecoration(),
+                  child: Image.asset("assets/images/sammy.png"),
                 ),
-                20.heightBox,
-                news.description.text.bold.make().px16(),
-                10.heightBox,
-                ElevatedButton(onPressed: () {}, child: Text("Read More"))
-              ],
-            ).py20(),
-          ),
+              ),
+              20.heightBox,
+              "dfghjkpajocjbfhbwflcheiuhwiueferhghirensdfghjkllkjhgfdsdfghjklkjhgfivnierincievnijlfsuweibcniwhliec"
+                  .text
+                  .make()
+                  .px8(),
+              news.trips.text.bold.make().px16(),
+              10.heightBox,
+              ElevatedButton(onPressed: () {}, child: Text("Read More"))
+            ],
+          ).py20(),
         ),
       ),
     );
