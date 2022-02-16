@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:nb_utils/nb_utils.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class ResearchPage extends StatelessWidget {
   const ResearchPage({Key? key}) : super(key: key);
@@ -20,7 +18,7 @@ class ResearchPage extends StatelessWidget {
       // backgroundColor: context.canvasColor,
       drawer: myDrawer(context),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/duotone.png"),
             fit: BoxFit.cover,
@@ -28,7 +26,7 @@ class ResearchPage extends StatelessWidget {
         ),
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Card(
@@ -39,7 +37,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.centresRoute);
                 },
                 leading: const Icon(Ionicons.locate_outline),
-                title: Text(
+                title: const Text(
                   "Centres",
                 ),
               ),
@@ -53,7 +51,7 @@ class ResearchPage extends StatelessWidget {
                   },
                   leading: const Icon(Ionicons.laptop_outline),
 
-                  title: Text("Research Infrastructures"),
+                  title: const Text("Research Infrastructures"),
                   // subtitle: Text("ohhh hoooo"),
                 ),
               ),
@@ -66,7 +64,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.faculresRoute);
                 },
                 leading: const Icon(Ionicons.people_outline),
-                title: Text("Faculty Researches"),
+                title: const Text("Faculty Researches"),
               ),
             )),
             Card(
@@ -77,7 +75,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.workshopRoute);
                 },
                 leading: const Icon(Ionicons.checkmark_done_circle_outline),
-                title: Text("Workshops"),
+                title: const Text("Workshops"),
               ),
             )),
             Card(
@@ -88,7 +86,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.seminarsRoute);
                 },
                 leading: const Icon(Ionicons.people_circle_outline),
-                title: Text("Seminars & Conferences"),
+                title: const Text("Seminars & Conferences"),
               ),
             )),
             Card(
@@ -99,7 +97,7 @@ class ResearchPage extends StatelessWidget {
                   Navigator.pushNamed(context, MyRoutes.publicationRoute);
                 },
                 leading: const Icon(Ionicons.book_outline),
-                title: Text("Publications"),
+                title: const Text("Publications"),
               ),
             )),
           ],

@@ -27,6 +27,8 @@ class MyRoutes {
   static String mscRoute = "/admission/mcs";
   static String phdRoute = "/admission/phd";
   static String calenderRoute = "/admission/calender";
+  // static String eventEditingRoute = "/admission/calender/event-editing";
+
   static String examcontrolRoute = "/admission/exam-control";
   static String schlorshipRoute = "/admission/schlorship";
   static String howRoute = "/admission/how";
@@ -82,4 +84,7 @@ class MyRoutes {
   static String researchinfraRoute = "/research/research-infractures";
   static String seminarsRoute = "/research/seminars";
   static String workshopRoute = "/research/workshop";
+
+  // News Data Route
+  static String newsshowRoute = "/news&bulletin/news";
 }

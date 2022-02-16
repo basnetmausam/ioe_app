@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:ioe_app/utils/routes.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CollegePage extends StatelessWidget {
@@ -9,64 +10,42 @@ class CollegePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Colleges",
-          style: Theme.of(context).textTheme.bodyText1,
+        appBar: AppBar(
+          title: Text(
+            "Colleges",
+            style: Theme.of(context).textTheme.bodyText1,
+          ),
         ),
-      ),
-      backgroundColor: context.canvasColor,
-      drawer: myDrawer(context),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Colleges",
-                style: Theme.of(context).textTheme.headline1,
-              ),
+        backgroundColor: context.canvasColor,
+        drawer: myDrawer(context),
+        body: ListView(
+          children: [
+            const SizedBox(
+              height: 80,
             ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Flexible(
-              child: ListView(
-            children: [
-              Card(
-                  child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.affiliatedRoute);
-                },
-                title: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "Affiliated Colleges",
-                  ),
-                ),
-              )),
-              Card(
+            Card(
                 child: ListTile(
-                  onTap: () {
-                    Navigator.pushNamed(context, MyRoutes.constituentRoute);
-                  },
-                  title: const Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text("Constituent Colleges"),
-                  ),
-                  // subtitle: Text("ohhh hoooo"),
-                ),
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.affiliatedRoute);
+              },
+              leading: const Icon(Ionicons.paper_plane_outline),
+              title: const Text(
+                "Affiliated Colleges",
               ),
-            ],
-            padding: const EdgeInsets.all(10),
-          ))
-        ],
-      ),
-    );
+            ).p8()),
+            Card(
+              child: ListTile(
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.constituentRoute);
+                },
+                leading: const Icon(Ionicons.disc_outline),
+
+                title: const Text("Constituent Colleges"),
+                // subtitle: Text("ohhh hoooo"),
+              ).p8(),
+            ),
+          ],
+          padding: const EdgeInsets.all(10),
+        ));
   }
 }

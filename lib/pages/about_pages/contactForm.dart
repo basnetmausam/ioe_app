@@ -41,9 +41,9 @@ class FormPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String patttern = r'(^[0-9]*$)';
-    RegExp regExp = new RegExp(patttern);
+    RegExp regExp = RegExp(patttern);
     return Container(
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -53,9 +53,9 @@ class FormPage extends StatelessWidget {
               child: Column(children: [
                 FormBuilderTextField(
                     name: 'Name',
-                    decoration: InputDecoration(labelText: 'Name'),
+                    decoration: const InputDecoration(labelText: 'Name'),
                     // autovalidateMode: AutovalidateMode.onUserInteraction,
-                    cursorRadius: Radius.circular(100),
+                    cursorRadius: const Radius.circular(100),
                     validator: (val) {
                       if (val == null || val.isEmpty) {
                         return 'please enter name';
@@ -63,9 +63,9 @@ class FormPage extends StatelessWidget {
                     }),
                 FormBuilderTextField(
                     name: 'Email',
-                    decoration: InputDecoration(labelText: 'Email'),
+                    decoration: const InputDecoration(labelText: 'Email'),
                     // autovalidateMode: AutovalidateMode.onUserInteraction,
-                    cursorRadius: Radius.circular(100),
+                    cursorRadius: const Radius.circular(100),
                     validator: (val) =>
                         (val == null || val.isEmpty || !val.contains("@"))
                             ? "enter a valid eamil"
@@ -73,7 +73,7 @@ class FormPage extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress),
                 FormBuilderTextField(
                   name: 'Phone Number',
-                  decoration: InputDecoration(labelText: 'Phone Number'),
+                  decoration: const InputDecoration(labelText: 'Phone Number'),
                   keyboardType: TextInputType.phone,
                   validator: (value) {
                     if (value == null || value.length == 0) {
@@ -88,16 +88,16 @@ class FormPage extends StatelessWidget {
                 ),
                 FormBuilderTextField(
                   name: 'Message',
-                  decoration: InputDecoration(labelText: 'Message'),
-                  cursorRadius: Radius.circular(100),
+                  decoration: const InputDecoration(labelText: 'Message'),
+                  cursorRadius: const Radius.circular(100),
                   keyboardType: TextInputType.multiline,
                   textInputAction: TextInputAction.newline,
                   minLines: 1,
                   maxLines: 5,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 ElevatedButton(
-                  child: Text('Submit'),
+                  child: const Text('Submit'),
                   onPressed: () {
                     // to reset the text inside textfield
 
@@ -124,7 +124,7 @@ class FormPage extends StatelessWidget {
                       _formKey.currentState?.reset();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                            content: Text('Message sent succesfully'),
+                            content: const Text('Message sent succesfully'),
                             backgroundColor: context.accentColor),
                       );
                     } else {

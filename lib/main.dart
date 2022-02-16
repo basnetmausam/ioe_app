@@ -6,9 +6,12 @@ import 'package:ioe_app/pages/about_pages/history.dart';
 import 'package:ioe_app/pages/about_pages/ioeemaillogin_page.dart';
 import 'package:ioe_app/pages/about_pages/messagedean_page.dart';
 import 'package:ioe_app/pages/about_pages/vision_page.dart';
+
 import 'package:ioe_app/pages/admission_pages/be_page.dart';
 import 'package:ioe_app/pages/admission_pages/calender_page.dart';
+
 import 'package:ioe_app/pages/admission_pages/evaluation_page.dart';
+
 import 'package:ioe_app/pages/admission_pages/examcontrol_page.dart';
 import 'package:ioe_app/pages/admission_pages/how_page.dart';
 import 'package:ioe_app/pages/admission_pages/msc_page.dart';
@@ -47,23 +50,28 @@ import 'package:ioe_app/pages/home_pages/newsandbulletin_page.dart';
 import 'package:ioe_app/pages/home_pages/partnership_page.dart';
 import 'package:ioe_app/pages/home_pages/program_page.dart';
 import 'package:ioe_app/pages/home_pages/research_page.dart';
+
 import 'package:ioe_app/pages/newsbulletin_pages/events_page.dart';
 import 'package:ioe_app/pages/newsbulletin_pages/ioemonthly_page.dart';
 import 'package:ioe_app/pages/newsbulletin_pages/news_page.dart';
+
 import 'package:ioe_app/pages/partnership_pages/capabilities_page.dart';
 import 'package:ioe_app/pages/partnership_pages/industrywork_page.dart';
 import 'package:ioe_app/pages/partnership_pages/natinternatlink_page.dart';
 import 'package:ioe_app/pages/programs_pages/Graduate%20(M.Sc.).dart';
 import 'package:ioe_app/pages/programs_pages/Post%20Graduate%20(Ph.%20D).dart';
 import 'package:ioe_app/pages/programs_pages/Undergraduate%20(B.E).dart';
+
 import 'package:ioe_app/pages/research_pages/centres_page.dart';
 import 'package:ioe_app/pages/research_pages/facultyresearch_page.dart';
 import 'package:ioe_app/pages/research_pages/publication_page.dart';
 import 'package:ioe_app/pages/research_pages/researchinfrastructures_page.dart';
 import 'package:ioe_app/pages/research_pages/seminars_page.dart';
 import 'package:ioe_app/pages/research_pages/workshop_page.dart';
+
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -109,7 +117,9 @@ class MyApp extends StatelessWidget {
         MyRoutes.beRoute: (context) => const BEPage(),
         MyRoutes.mscRoute: (context) => const MscPage(),
         MyRoutes.phdRoute: (context) => const PhdPage(),
-        MyRoutes.calenderRoute: (context) => const CalenderPage(),
+        MyRoutes.calenderRoute: (context) => const CalendarPage(),
+        // MyRoutes.eventEditingRoute: (context) => const EventEditingPage(),
+
         MyRoutes.examcontrolRoute: (context) => const ExamPage(),
         MyRoutes.howRoute: (context) => const HowPage(),
         MyRoutes.whyRoute: (context) => const WhyPage(),

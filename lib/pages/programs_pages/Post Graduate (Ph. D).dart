@@ -54,17 +54,17 @@ class PostGraduatePage extends StatelessWidget {
             ),
           ),
 
-          new ListTile(
-            leading: new MyBullet(),
+          ListTile(
+            leading: MyBullet(),
             title: const Text('Application Call'),
           ),
-          new ListTile(
-            leading: new MyBullet(),
-            title: new Text('IOE PhD Rules & Regulations'),
+          ListTile(
+            leading: MyBullet(),
+            title: const Text('IOE PhD Rules & Regulations'),
           ),
-          new ListTile(
-            leading: new MyBullet(),
-            title: new Text('IOE PhD Application Form '),
+          ListTile(
+            leading: MyBullet(),
+            title: const Text('IOE PhD Application Form '),
           ),
 
           Padding(
@@ -75,17 +75,17 @@ class PostGraduatePage extends StatelessWidget {
             ),
           ),
 
-          new ListTile(
-            leading: new MyBullet(),
+          ListTile(
+            leading: MyBullet(),
             title: const Text('PhD Thesis Template'),
           ),
-          new ListTile(
-            leading: new MyBullet(),
-            title: new Text('PhD Thesis Template Zipped tools'),
+          ListTile(
+            leading: MyBullet(),
+            title: const Text('PhD Thesis Template Zipped tools'),
           ),
-          new ListTile(
-            leading: new MyBullet(),
-            title: new Text('IERC Presentation Template'),
+          ListTile(
+            leading: MyBullet(),
+            title: const Text('IERC Presentation Template'),
           ),
 
           // Flexible(
@@ -124,10 +124,10 @@ class PostGraduatePage extends StatelessWidget {
 class MyBullet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       height: 6.0,
       width: 6.0,
-      decoration: new BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.black,
         shape: BoxShape.circle,
       ),

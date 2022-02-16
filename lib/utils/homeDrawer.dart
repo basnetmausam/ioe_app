@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-final Paadding = EdgeInsets.symmetric(horizontal: 20);
+final Paadding = const EdgeInsets.symmetric(horizontal: 20);
 Widget myDrawer(BuildContext context) {
   return Drawer(
     backgroundColor: context.cardColor,
@@ -19,17 +19,17 @@ Widget myDrawer(BuildContext context) {
         ),
 
         ListTile(
-          title: Text('HOME'),
+          title: const Text('HOME'),
           onTap: () {
             Navigator.pushNamed(context, MyRoutes.navigationRoute);
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 13,
         ),
         ExpansionTile(
-            title: Text('ABOUT IOE'),
-            leading: Icon(Icons.info_outline_rounded),
+            title: const Text('ABOUT IOE'),
+            leading: const Icon(Icons.info_outline_rounded),
             children: <Widget>[
               Gesturedetectors(text: 'IOE at a Glance'),
               Gesturedetectors(text: 'Message from Dean'),
@@ -41,8 +41,8 @@ Widget myDrawer(BuildContext context) {
             ]),
 
         ExpansionTile(
-            title: Text('PROGRAMS'),
-            leading: Icon(Icons.event),
+            title: const Text('PROGRAMS'),
+            leading: const Icon(Icons.event),
             children: <Widget>[
               Gesturedetectors(
                   text: 'Undergraduate (B.E.)',
@@ -56,16 +56,16 @@ Widget myDrawer(BuildContext context) {
             ]),
 
         ExpansionTile(
-            title: Text('COLLEGES'),
-            leading: Icon(Icons.school),
+            title: const Text('COLLEGES'),
+            leading: const Icon(Icons.school),
             children: <Widget>[
               Gesturedetectors(text: 'Affiliated Colleges'),
               Gesturedetectors(text: 'Constituent Colleges'),
             ]),
 
         ExpansionTile(
-            title: Text('ADMISSION'),
-            leading: Icon(Icons.collections_bookmark),
+            title: const Text('ADMISSION'),
+            leading: const Icon(Icons.collections_bookmark),
             children: <Widget>[
               Gesturedetectors(text: 'Why Choose IOE'),
               Gesturedetectors(text: 'How to Apply'),
@@ -79,8 +79,8 @@ Widget myDrawer(BuildContext context) {
             ]),
 
         ExpansionTile(
-            title: Text('RESEARCH'),
-            leading: Icon(Icons.person_search_outlined),
+            title: const Text('RESEARCH'),
+            leading: const Icon(Icons.person_search_outlined),
             children: <Widget>[
               Gesturedetectors(text: 'Centers'),
               Gesturedetectors(text: 'Research Infrastructures'),
@@ -91,8 +91,8 @@ Widget myDrawer(BuildContext context) {
             ]),
 
         ExpansionTile(
-            title: Text('PARTNERSHIPS'),
-            leading: Icon(Icons.insert_link),
+            title: const Text('PARTNERSHIPS'),
+            leading: const Icon(Icons.insert_link),
             children: <Widget>[
               Gesturedetectors(text: 'National and International Linkage'),
               Gesturedetectors(text: 'Working with Industry'),
@@ -100,8 +100,8 @@ Widget myDrawer(BuildContext context) {
             ]),
 
         ExpansionTile(
-            title: Text('NEWS AND BULLETIN'),
-            leading: Icon(Icons.menu_book),
+            title: const Text('NEWS AND BULLETIN'),
+            leading: const Icon(Icons.menu_book),
             children: <Widget>[
               Gesturedetectors(text: 'News'),
               Gesturedetectors(text: 'Events'),
