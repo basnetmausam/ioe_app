@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' hide CalendarDatePicker;
 import 'package:nepali_date_picker/nepali_date_picker.dart';
 import 'package:nepali_utils/nepali_utils.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:collection/collection.dart';
 
 /// Calendar Picker Example
 class CalendarBEWidget extends StatelessWidget {
@@ -112,7 +113,8 @@ class CalendarBEWidget extends StatelessWidget {
             builder: (context, date, _) {
               Event? event;
               try {
-                event = events.firstWhere((e) => _dayEquals(e.date, date));
+                event =
+                    events.firstWhereOrNull((e) => _dayEquals(e.date, date));
               } on StateError {
                 event = null;
               }
@@ -191,7 +193,7 @@ class TodayWidget extends StatelessWidget {
                       .toUpperCase(),
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText1
+                      .bodyText2
                       ?.copyWith(color: Colors.black),
                   textAlign: TextAlign.center,
                 ),

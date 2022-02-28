@@ -267,9 +267,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.add_comment_outlined),
+                      const Icon(FontAwesomeIcons.calendarAlt),
                       Text(
-                        'Extras',
+                        'Calender',
                         style: context.textTheme.headline5,
                       ),
                     ],
