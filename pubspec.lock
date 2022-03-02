@@ -594,10 +594,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
     version: "0.4.3"
-=======
-    version: "0.4.8"
   timezone:
     dependency: transitive
     description:
@@ -605,7 +602,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.8.0"
->>>>>>> 2e30a391b4e28ec448b630bb779d09f7489b113e
   typed_data:
     dependency: transitive
     description:

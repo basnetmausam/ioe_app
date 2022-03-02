@@ -66,8 +66,10 @@ import 'package:ioe_app/pages/research_pages/centres_page.dart';
 import 'package:ioe_app/pages/research_pages/facultyresearch_page.dart';
 import 'package:ioe_app/pages/research_pages/publication_page.dart';
 import 'package:ioe_app/pages/research_pages/researchinfrastructures_page.dart';
-import 'package:ioe_app/pages/research_pages/seminars_page.dart';
+import 'package:ioe_app/pages/research_pages/seminars_page.dart'; //exam list
 import 'package:ioe_app/pages/research_pages/workshop_page.dart';
+import 'package:ioe_app/pages/research_pages/check_result.dart'; //check result
+
 
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
@@ -172,8 +174,10 @@ class MyApp extends StatelessWidget {
 
         MyRoutes.faculresRoute: (context) => const FacultiesResearchPage(),
         MyRoutes.publicationRoute: (context) => const PublicationsPage(),
-        MyRoutes.seminarsRoute: (context) => const SeminarsPage(),
+        MyRoutes.seminarsRoute: (context) => const Exams(),       //exams list
         MyRoutes.workshopRoute: (context) => const WorkshopPage(),
+
+        MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result
       },
     );
   }
