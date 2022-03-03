@@ -87,4 +87,7 @@ class MyRoutes {
 
   // News Data Route
   static String newsshowRoute = "/news&bulletin/news";
+
+  //check result
+  static String resultRoute = "/research/check_result";
 }
