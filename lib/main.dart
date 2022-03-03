@@ -177,7 +177,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.seminarsRoute: (context) => const Exams(),       //exams list
         MyRoutes.workshopRoute: (context) => const WorkshopPage(),
 
-        MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result
+        //MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result
       },
     );
   }

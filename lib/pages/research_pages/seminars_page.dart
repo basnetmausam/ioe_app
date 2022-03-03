@@ -28,12 +28,10 @@ class _ExamsState extends State<Exams> {
 
   FetchExamList _examList = FetchExamList();
 
-  List<Exam> exam = <Exam>[];
+  FetchResultList _resultList = FetchResultList();
 
-  String getexamId(String examID) {
-  return examID;
-}
-
+  //List<Exam> exam = <Exam>[];
+  String exam_id = 0.toString();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -47,21 +45,25 @@ class _ExamsState extends State<Exams> {
               future: _examList.getexam(),
               builder: (context, snapshot) {
                 var data = snapshot.data;
+                print(data);
                 return ListView.builder(
                     itemCount: data?.length,
                     itemBuilder: (context, index) {
-                      final examdata = exam[index];
-                      String examID = examdata.examId!;
-                      //getexamId(examID);
                       if (!snapshot.hasData) {
                         return Center(child: CircularProgressIndicator());
                       }
                       return Card(
                         child: GestureDetector(
-                          onTap: () => Navigator.push(
+                    
+                          onTap: () =>{ //_resultList.setexamId = '${data?[index].examId}',
+                                        //print('${data?[index].examId}'),
+                                        //_resultList.prints(),
+                                        exam_id = '${data?[index].examId}',
+                                        _resultList.printURL(),
+                                        Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                        builder: (context) => CheckResultPage(exam : examID))),
+                                        builder: (context) => CheckResultPage(examId :exam_id)))},
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: ListTile(
