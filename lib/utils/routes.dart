@@ -27,6 +27,7 @@ class MyRoutes {
   static String mscRoute = "/admission/mcs";
   static String phdRoute = "/admission/phd";
   static String calenderRoute = "/admission/calender";
+  static String degreEqRoute = "/admission/degreeEq";
   // static String eventEditingRoute = "/admission/calender/event-editing";
 
   static String examcontrolRoute = "/admission/exam-control";
