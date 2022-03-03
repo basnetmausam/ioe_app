@@ -71,7 +71,6 @@ import 'package:ioe_app/pages/research_pages/workshop_page.dart';
 
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());

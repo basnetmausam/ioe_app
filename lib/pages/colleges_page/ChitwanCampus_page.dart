@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
-import 'package:ioe_app/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
-// import 'package:url_launcher/url_launcher.dart';
-import 'package:ioe_app/pages/colleges_page/data.dart';
 
 class ChitwanCampusPage extends StatelessWidget {
   const ChitwanCampusPage({Key? key}) : super(key: key);

@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class HowPage extends StatelessWidget {
   const HowPage({Key? key}) : super(key: key);
@@ -52,10 +51,10 @@ class HowPage extends StatelessWidget {
                         ),
                         TextSpan(
                           text: " http://entrance.ioe.edu.np",
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.blue,
                           ),
-                          recognizer: new TapGestureRecognizer()
+                          recognizer: TapGestureRecognizer()
                             ..onTap =
                                 () => launch('http://entrance.ioe.edu.np'),
                         ),
