@@ -18,14 +18,13 @@ import 'package:ioe_app/pages/research_pages/check_result.dart';
 // }
 
 class Exams extends StatefulWidget {
-  const Exams({ Key? key }) : super(key: key);
+  const Exams({Key? key}) : super(key: key);
 
   @override
   State<Exams> createState() => _ExamsState();
 }
 
 class _ExamsState extends State<Exams> {
-
   FetchExamList _examList = FetchExamList();
 
   FetchResultList _resultList = FetchResultList();
@@ -45,7 +44,6 @@ class _ExamsState extends State<Exams> {
               future: _examList.getexam(),
               builder: (context, snapshot) {
                 var data = snapshot.data;
-                print(data);
                 return ListView.builder(
                     itemCount: data?.length,
                     itemBuilder: (context, index) {
@@ -54,38 +52,19 @@ class _ExamsState extends State<Exams> {
                       }
                       return Card(
                         child: GestureDetector(
-                    
-                          onTap: () =>{ //_resultList.setexamId = '${data?[index].examId}',
-                                        //print('${data?[index].examId}'),
-                                        //_resultList.prints(),
-                                        exam_id = '${data?[index].examId}',
-                                        _resultList.printURL(),
-                                        Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                        builder: (context) => CheckResultPage(examId :exam_id)))},
+                          onTap: () => {
+                            exam_id = '${data?[index].examId}',
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        CheckResultPage(examId: exam_id)))
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: ListTile(
                               title: Row(
                                 children: [
-                                  // Container(
-                                  //   width: 60,
-                                  //   height: 60,
-                                  //   decoration: BoxDecoration(
-                                  //     color: Colors.deepPurpleAccent,
-                                  //     borderRadius: BorderRadius.circular(10),
-                                  //   ),
-                                  //   child: Center(
-                                  //     child: Text(
-                                  //       '${data?[index].examId}',
-                                  //       style: TextStyle(
-                                  //           fontSize: 20,
-                                  //           fontWeight: FontWeight.bold,
-                                  //           color: Colors.white),  
-                                  //     ),
-                                  //   ),
-                                  // ),
                                   SizedBox(width: 20),
                                   Column(
                                       crossAxisAlignment:
