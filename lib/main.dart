@@ -8,7 +8,6 @@ import 'package:ioe_app/pages/about_pages/messagedean_page.dart';
 import 'package:ioe_app/pages/about_pages/vision_page.dart';
 
 import 'package:ioe_app/pages/admission_pages/be_page.dart';
-import 'package:ioe_app/pages/admission_pages/calender_page.dart';
 
 import 'package:ioe_app/pages/admission_pages/evaluation_page.dart';
 
@@ -19,6 +18,7 @@ import 'package:ioe_app/pages/admission_pages/phd_page.dart';
 import 'package:ioe_app/pages/admission_pages/schlorship_page.dart';
 import 'package:ioe_app/pages/admission_pages/why_page.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
+import 'package:ioe_app/pages/calender_pages/calender_page.dart';
 // college
 import 'package:ioe_app/pages/colleges_page/affiliated_page.dart';
 import 'package:ioe_app/pages/colleges_page/constituent_page.dart';
@@ -46,7 +46,7 @@ import 'package:ioe_app/pages/home_pages/admission_page.dart';
 import 'package:ioe_app/pages/home_pages/college_page.dart';
 import 'package:ioe_app/pages/home_page.dart';
 import 'package:ioe_app/pages/home_pages/extras_page.dart';
-import 'package:ioe_app/pages/home_pages/newsandbulletin_page.dart';
+import 'package:ioe_app/pages/home_pages/result_page.dart';
 import 'package:ioe_app/pages/home_pages/partnership_page.dart';
 import 'package:ioe_app/pages/home_pages/program_page.dart';
 import 'package:ioe_app/pages/home_pages/research_page.dart';
@@ -68,8 +68,7 @@ import 'package:ioe_app/pages/research_pages/publication_page.dart';
 import 'package:ioe_app/pages/research_pages/researchinfrastructures_page.dart';
 import 'package:ioe_app/pages/research_pages/seminars_page.dart'; //exam list
 import 'package:ioe_app/pages/research_pages/workshop_page.dart';
-import 'package:ioe_app/pages/research_pages/check_result.dart'; //check result
-
+//check result
 
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
@@ -86,7 +85,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
@@ -97,7 +96,7 @@ class MyApp extends StatelessWidget {
 
         // HOMEPAGE
         MyRoutes.collegeRoute: (context) => const CollegePage(),
-        MyRoutes.newsbulletinRoute: (context) => const NewsPage(),
+        MyRoutes.resultcheckRoute: (context) => const ResultPage(),
         MyRoutes.ioeRoute: (context) => const AboutPage(),
         MyRoutes.programRoute: (context) => const ProgramPage(),
         MyRoutes.admissionRoute: (context) => const AdmissionPage(),
@@ -173,7 +172,7 @@ class MyApp extends StatelessWidget {
 
         MyRoutes.faculresRoute: (context) => const FacultiesResearchPage(),
         MyRoutes.publicationRoute: (context) => const PublicationsPage(),
-        MyRoutes.seminarsRoute: (context) => const Exams(),       //exams list
+        MyRoutes.seminarsRoute: (context) => const SeminarPage(), //exams list
         MyRoutes.workshopRoute: (context) => const WorkshopPage(),
 
         //MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result

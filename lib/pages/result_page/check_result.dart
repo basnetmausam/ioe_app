@@ -4,6 +4,9 @@ import 'package:http/http.dart' as http;
 import 'package:ioe_app/model/result_model.dart';
 import 'package:ioe_app/model/result_data.dart';
 import 'package:ioe_app/model/exam_model.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+import '../../utils/homeDrawer.dart';
 
 class CheckResultPage extends StatefulWidget {
   final String examId;
@@ -25,13 +28,20 @@ class _CheckResultPageState extends State<CheckResultPage> {
     String patttern = r'(^[0-9]*$)';
     RegExp regExp = RegExp(patttern);
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Enter your ID:",
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+      backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
       body: Container(
         padding: EdgeInsets.all(20),
         child: FormBuilder(
           key: _formKey,
           child: Column(
             children: [
-              Text('Enter your ID:'),
               const SizedBox(
                 height: 20.0,
               ),
