@@ -19,27 +19,25 @@ import 'package:ioe_app/pages/admission_pages/schlorship_page.dart';
 import 'package:ioe_app/pages/admission_pages/why_page.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
 import 'package:ioe_app/pages/calender_pages/calender_page.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/advanced.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/himalaya.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/janakpur.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/kantipur.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/kathford.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/kathmandu.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/khwopa.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/lalitpur.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/national.dart';
+import 'package:ioe_app/pages/colleges_page/aff_clz_pages/sagarmatha.dart';
 // college
 import 'package:ioe_app/pages/colleges_page/affiliated_page.dart';
+import 'package:ioe_app/pages/colleges_page/const_clz_pages/ChitwanCampus_page.dart';
+import 'package:ioe_app/pages/colleges_page/const_clz_pages/Paschimanchal_page.dart';
+import 'package:ioe_app/pages/colleges_page/const_clz_pages/Purwanchal_page.dart';
+import 'package:ioe_app/pages/colleges_page/const_clz_pages/Thapathali_campus.dart';
+import 'package:ioe_app/pages/colleges_page/const_clz_pages/pulchowk_page.dart';
 import 'package:ioe_app/pages/colleges_page/constituent_page.dart';
 import 'package:ioe_app/widgets/map.dart';
-// constituent
-import 'package:ioe_app/pages/colleges_page/Thapathali_campus.dart';
-import 'package:ioe_app/pages/colleges_page/pulchowk_page.dart';
-import 'package:ioe_app/pages/colleges_page/Purwanchal_page.dart';
-import 'package:ioe_app/pages/colleges_page/Paschimanchal_page.dart';
-import 'package:ioe_app/pages/colleges_page/ChitwanCampus_page.dart';
-// affiliated
-import 'package:ioe_app/pages/colleges_page/advanced.dart';
-import 'package:ioe_app/pages/colleges_page/himalaya.dart';
-import 'package:ioe_app/pages/colleges_page/janakpur.dart';
-import 'package:ioe_app/pages/colleges_page/kantipur.dart';
-import 'package:ioe_app/pages/colleges_page/kathford.dart';
-import 'package:ioe_app/pages/colleges_page/kathmandu.dart';
-import 'package:ioe_app/pages/colleges_page/khwopa.dart';
-import 'package:ioe_app/pages/colleges_page/lalitpur.dart';
-import 'package:ioe_app/pages/colleges_page/national.dart';
-import 'package:ioe_app/pages/colleges_page/sagarmatha.dart';
 
 import 'package:ioe_app/pages/home_pages/aboutioe_page.dart';
 import 'package:ioe_app/pages/home_pages/admission_page.dart';
@@ -85,7 +83,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,

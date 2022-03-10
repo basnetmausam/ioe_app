@@ -11,7 +11,7 @@ class AffiliatedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Colleges",
+          "Affiliated Colleges",
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
@@ -20,20 +20,7 @@ class AffiliatedPage extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Affiliated Colleges",
-                style: Theme.of(context).textTheme.headline1,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 40,
+            height: 20,
           ),
           Flexible(
               child: ListView(
