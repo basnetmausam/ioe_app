@@ -18,7 +18,6 @@ Widget myDrawer(BuildContext context) {
         const SizedBox(
           height: 50,
         ),
-
         ListTile(
           leading: const Icon(Icons.home),
           title: const Text('HOME'),
@@ -58,7 +57,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'IOE Email Login',
                   onClicked: () => aboutioeItem(context, 6)),
             ]),
-
         ExpansionTile(
             title: const Text('PROGRAMS'),
             leading: const Icon(
@@ -76,7 +74,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'Post Graduate (Ph.D)',
                   onClicked: () => programItem(context, 2)),
             ]),
-
         ExpansionTile(
             title: const Text('COLLEGES'),
             leading: const Icon(
@@ -90,7 +87,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'Constituent Colleges',
                   onClicked: () => collegesItem(context, 1)),
             ]),
-
         ExpansionTile(
             title: const Text('ADMISSION'),
             leading: const Icon(
@@ -126,7 +122,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'Exam Control Division',
                   onClicked: () => admissionItem(context, 8)),
             ]),
-
         ExpansionTile(
             title: const Text('RESEARCH'),
             leading: const Icon(
@@ -150,7 +145,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'Publications',
                   onClicked: () => researchItem(context, 5)),
             ]),
-
         ExpansionTile(
             title: const Text('PARTNERSHIPS'),
             leading: const Icon(FontAwesomeIcons.solidHandshake),
@@ -174,7 +168,6 @@ Widget myDrawer(BuildContext context) {
                 onTap: () => partnershipItem(context, 2),
               ),
             ]),
-
         ExpansionTile(
             title: const Text('NEWS AND BULLETIN'),
             leading: const Icon(FontAwesomeIcons.solidNewspaper),
@@ -189,60 +182,6 @@ Widget myDrawer(BuildContext context) {
                   text: 'IOE Monthly Bulletin',
                   onClicked: () => newsandbuletinItem(context, 2)),
             ]),
-
-        // buildMenuItem(
-        //     text: 'About IOE',
-        //     icon: Icons.info_outline_rounded,
-        //     onClicked: () => selectedItem(context, 0)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Programs',
-        //     icon: Icons.event,
-        //     onClicked: () => selectedItem(context, 1)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Colleges',
-        //     icon: Icons.school,
-        //     onClicked: () => selectedItem(context, 2)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Admission',
-        //     icon: Icons.collections_bookmark,
-        //     onClicked: () => selectedItem(context, 3)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Research',
-        //     icon: Icons.person_search_outlined,
-        //     onClicked: () => selectedItem(context, 4)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Patnership',
-        //     icon: Icons.insert_link,
-        //     onClicked: () => selectedItem(context, 5)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'News And Buletin',
-        //     icon: Icons.menu_book,
-        //     onClicked: () => selectedItem(context, 6)),
-        // const SizedBox(
-        //   height: 15,
-        // ),
-        // buildMenuItem(
-        //     text: 'Extras',
-        //     icon: Icons.add_comment_outlined,
-        //     onClicked: () => selectedItem(context, 7)),
       ]),
     ),
   );
