@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget climateCard(BuildContext context) {
   return Card(
@@ -89,12 +91,13 @@ Widget climateCard(BuildContext context) {
               ),
 
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.only(left: 16, top: 16),
                 child: Text(
                   "The candidate willing to appear in the entrance examination to get enrollment into the M.Sc. program should fill and submit the Application Form online within the deadline prescribed by the Entrance Exam Board. Application forms will be available in the websites: www.ioe.edu.np/entrance or http://entrance.ioe.edu.np. The application procedures are as follows:\n\n1. The candidate should deposit required amount as an application fee for entrance examination in Account No mentioned in the notice by submitting a specially prepared voucher often by filling applicant's name and date of birth in it. The voucher No. indicated in the voucher needs to be specified in the online application form.\n\n2. The candidate must select the appropriate entrance stream.\n\n3. The candidate should fill up the other required fields in the form without skipping any steps.\n\n4. The candidate also needs to upload his/her color photograph of prescribed specification and one of the following identification documents.",
                   style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
+
               const Padding(
                 padding: EdgeInsets.only(left: 70.0, right: 16),
                 child: ListTile(
@@ -229,6 +232,25 @@ class MyBullet extends StatelessWidget {
         color: Colors.black,
         shape: BoxShape.circle,
       ),
+    );
+  }
+}
+
+class linktext extends StatelessWidget {
+  final String text;
+  linktext(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+          text: text,
+          style: TextStyle(
+              decoration: TextDecoration.underline, color: Colors.blue),
+          recognizer: TapGestureRecognizer()
+            ..onTap = (() {
+              launch(text);
+            })),
     );
   }
 }

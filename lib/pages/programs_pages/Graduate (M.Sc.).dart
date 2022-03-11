@@ -8,7 +8,9 @@ import 'package:ioe_app/pages/programs_pages/Graduate%20page/M.Sc.%20in%20Earthq
 import 'package:ioe_app/pages/programs_pages/Graduate%20page/M.Sc.%20in%20Energy%20System%20Planning%20and%20Management.dart';
 import 'package:ioe_app/pages/programs_pages/Graduate%20page/M.Sc.%20in%20Material%20Science%20and%20Engineering.dart';
 import 'package:ioe_app/utils/homeDrawer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ioe_app/pages/programs_pages/programboxes.dart';
 
 class GraduatePage extends StatelessWidget {
@@ -41,10 +43,27 @@ class GraduatePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "In 1996 Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Urban Planning, Structural Engineering, Environmental Engineering and Water Resources Engineering. Pulchowk Campus has also started M. Sc. courses in Renewable Energy Engineering, Geotechnical Engineering, Information and Communication and Power System Engineering effective from December, 2001. Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Sustainable Water Sanitation and Health Development from 2007 and Technology and Innovation Management from 2010. This campus has also started master program in Transportation Engineering and Disaster Risk Management from the academic year 2011/12. A category-wise detail of Master Programs’ intakecapacity is given below in section 1.3 below. Institute has also started regular Ph D admission from academic session 2010/11 in all departments.\n\nIn 1996 Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Urban Planning, Structural Engineering, Environmental Engineering and Water Resources Engineering. Pulchowk Campus has also started M. Sc. courses in Renewable Energy Engineering, Geotechnical Engineering, Information and Communication and Power System Engineering effective from December, 2001. Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Sustainable Water Sanitation and Health Development from 2007 and Technology and Innovation Management from 2010. This campus has also started master program in Transportation Engineering and Disaster Risk Management from the academic year 2011/12. A category-wise detail of Master Programs’ intakecapacity is given below in section 1.3 below. Institute has also started regular Ph D admission from academic session 2010/11 in all departments.\n\nEach year IOE publishes an Information Brochure along with the announcement of entrance examination of that year. This Brochure contains all the required information for an interested candidate to appear in the exam and finally get admitted. This Brochure also contains the current intake capacity.",
+                "In 1996 Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Urban Planning, Structural Engineering, Environmental Engineering and Water Resources Engineering. Pulchowk Campus has also started M. Sc. courses in Renewable Energy Engineering, Geotechnical Engineering, Information and Communication and Power System Engineering effective from December, 2001. Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Sustainable Water Sanitation and Health Development from 2007 and Technology and Innovation Management from 2010. This campus has also started master program in Transportation Engineering and Disaster Risk Management from the academic year 2011/12. A category-wise detail of Master Programs’ intakecapacity is given below in section 1.3 below. Institute has also started regular Ph D admission from academic session 2010/11 in all departments.\n\nIn 1996 Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Urban Planning, Structural Engineering, Environmental Engineering and Water Resources Engineering. Pulchowk Campus has also started M. Sc. courses in Renewable Energy Engineering, Geotechnical Engineering, Information and Communication and Power System Engineering effective from December, 2001. Pulchowk Campus, with support from the Norwegian Government, has started M.Sc. Courses in Sustainable Water Sanitation and Health Development from 2007 and Technology and Innovation Management from 2010. This campus has also started master program in Transportation Engineering and Disaster Risk Management from the academic year 2011/12. A category-wise detail of Master Programs’ intakecapacity is given below in section 1.3 below. Institute has also started regular Ph D admission from academic session 2010/11 in all departments.\n\nEach year IOE publishes an Information Brochure along with the announcement of entrance examination of that year. This Brochure contains all the required information for an interested candidate to appear in the exam and finally get admitted. This Brochure also contains the current intake capacity, Fee structure and scholarship schemes. ",
                 style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                  text:
+                      "Click Here For Masters Level Information Brochure 2078 BS",
+                  style: const TextStyle(
+                    color: Colors.blue,
+                  ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => launch(
+                        'https://ioe.edu.np/media/1689/ioe-masters-program-information-brochure_2078.pdf'),
+                ),
+              ])),
+            ),
+
             // Padding(
             //   padding: const EdgeInsets.all(8.0),
             //   child: Text(
