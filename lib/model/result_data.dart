@@ -39,7 +39,7 @@ class FetchResultList {
   // var data = [];
   List<Result> results = [];
   late String urlList =
-      'http://127.0.0.1:8000/exam/${this.examId}/${this.studentId}';
+      'https://ioe-result.herokuapp.com/exam/${this.examId}/${this.studentId}';
 
   Future<Result> getResult() async {
     var url = Uri.parse(urlList);
