@@ -10,7 +10,7 @@ class MyRoutes {
   static String admissionRoute = "/admission";
   static String researchRoute = "/research";
   static String partnershipRoute = "/partnership";
-  static String newsbulletinRoute = "/news&bulletin";
+  static String resultcheckRoute = "/checkresult";
   static String extrasRoute = "/extras";
 
   // About IOE Routes

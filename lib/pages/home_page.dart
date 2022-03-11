@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 20,
+            height: 60,
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -236,15 +236,14 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.newsbulletinRoute);
+                  Navigator.pushNamed(context, MyRoutes.resultcheckRoute);
                 },
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(FontAwesomeIcons.solidNewspaper),
-                      Text('News & Bulletin',
-                          style: context.textTheme.headline5),
+                      Text('Results', style: context.textTheme.headline5),
                     ],
                   ),
                   decoration: BoxDecoration(
@@ -261,7 +260,7 @@ class HomePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.extrasRoute);
+                  Navigator.pushNamed(context, MyRoutes.calenderRoute);
                 },
                 child: Container(
                   child: Column(

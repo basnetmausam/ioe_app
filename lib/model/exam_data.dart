@@ -6,7 +6,7 @@ import 'package:ioe_app/model/exam_model.dart';
 class FetchExamList {
   var data = [];
   List<Exam> results = [];
-  String urlList = 'http://127.0.0.1:8000/exam/';
+  String urlList = 'https://ioe-result.herokuapp.com/exam/';
 
   Future<List<Exam>> getexam() async {
     var url = Uri.parse(urlList);

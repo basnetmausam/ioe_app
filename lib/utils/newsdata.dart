@@ -20,7 +20,7 @@ class _NewsHaruState extends State<NewsHaru> {
 
   late int totalPages;
 
-  List<NewsModel> news = <NewsModel>[];
+  List<Datum> passengers = <Datum>[];
 
   final RefreshController refreshController =
       RefreshController(initialRefresh: true);
@@ -41,34 +41,17 @@ class _NewsHaruState extends State<NewsHaru> {
     final response = await http.get(uri);
 
     if (response.statusCode == 200) {
-      final jsonData = jsonDecode(response.body);
+      final result = newsModelFromJson(response.body);
 
       if (isRefresh) {
-        news.clear();
-        jsonData['data'].forEach((element) {
-          if (element["name"] != null && element['trips'] != null) {
-            NewsModel newsmodel = NewsModel(
-              name: element['name'],
-              trips: element['trips'],
-            );
-            news.add(newsmodel);
-          }
-        });
+        passengers = result.data;
       } else {
-        jsonData['data'].forEach((element) {
-          if (element["name"] != null && element['trips'] != null) {
-            NewsModel newsmodel = NewsModel(
-              name: element['name'],
-              trips: element['trips'],
-            );
-            news.add(newsmodel);
-          }
-        });
+        passengers.addAll(result.data);
       }
 
       currentPage++;
 
-      totalPages = jsonData['totalPages'];
+      totalPages = result.totalPages;
 
       // print(response.body);
       setState(() {});
@@ -101,19 +84,20 @@ class _NewsHaruState extends State<NewsHaru> {
           }
         },
         child: ListView.builder(
-          itemCount: news.length,
+          itemCount: passengers.length,
           physics: const ClampingScrollPhysics(),
           shrinkWrap: true, // add this otherwise an error
           itemBuilder: (context, index) {
-            final newsdata = news[index];
+            final newsdata = passengers[index];
             return InkWell(
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => NewsDetailPage(news: newsdata))),
               child: NewsTemplate(
-                trips: news[index].trips,
-                name: news[index].name,
+                trips: passengers[index].trips,
+                name: passengers[index].name,
+                airline: passengers[index].airline,
               ),
             );
           },
@@ -126,10 +110,12 @@ class _NewsHaruState extends State<NewsHaru> {
 class NewsTemplate extends StatelessWidget {
   String name;
   int trips;
+  var airline;
+
   NewsTemplate({
     required this.trips,
     required this.name,
-    // required this.airline,
+    required this.airline,
   });
 
   @override
@@ -169,21 +155,37 @@ class NewsTemplate extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                name,
+                airline[0].slogan.toString(),
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15.0,
+                  fontSize: 20.0,
                 ),
               ),
             ),
-            // const SizedBox(height: 8),
-            // Text(
-            //   description,
-            //   style: TextStyle(fontSize: 15.0, color: Colors.grey[800]),
-            // ),
             const SizedBox(
               height: 10,
-            )
+            ),
+            Container(
+              height: 200.0,
+              width: 500.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: NetworkImage(airline[0].logo.toString()),
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Text(
+            //     airline[0].slogan.toString(),
+            //     style: const TextStyle(
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 15.0,
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

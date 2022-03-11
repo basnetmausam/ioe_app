@@ -76,14 +76,14 @@ class AdmissionPage extends StatelessWidget {
             leading: const Icon(Ionicons.arrow_up_circle_outline),
             title: const Text("Post Graduate(Ph. D)"),
           ).p8()),
-          Card(
-              child: ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, MyRoutes.calenderRoute);
-            },
-            leading: const Icon(Ionicons.calendar_outline),
-            title: const Text("Academic Calender"),
-          ).p8()),
+          // Card(
+          //     child: ListTile(
+          //   onTap: () {
+          //     Navigator.pushNamed(context, M);
+          //   },
+          //   leading: const Icon(Ionicons.calendar_outline),
+          //   title: const Text("Academic Calender"),
+          // ).p8()),
           Card(
               child: ListTile(
             onTap: () {

@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:ioe_app/pages/colleges_page/Thapathali_campus.dart';
-import 'package:ioe_app/pages/colleges_page/pulchowk_page.dart';
+
 import 'package:ioe_app/pages/colleges_page/data.dart';
 
 class MapPage extends StatefulWidget {
