@@ -12,37 +12,41 @@ Widget programBoxes(
   return Card(
       child: ListTile(
     onTap: () => showModalBottomSheet(
+        isScrollControlled: true,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
         context: context,
         builder: (BuildContext context) {
-          return ListView(
-            children: [
-              // Center(
-              //   child: Padding(
-              //     padding: const EdgeInsets.all(5.0),
-              //     child: Text(
-              //       text,
-              //       style: Theme.of(context).textTheme.headline3,
-              //     ),
-              //   ),
-              // ),
+          return Container(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Center(
+                //   child: Padding(
+                //     padding: const EdgeInsets.all(5.0),
+                //     child: Text(
+                //       text,
+                //       style: Theme.of(context).textTheme.headline3,
+                //     ),
+                //   ),
+                // ),
 
-              ClipRRect(
-                borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(20.0),
-                    topLeft: Radius.circular(20.0)),
-                child: Image.asset(img),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  text1,
-                  style: Theme.of(context).textTheme.bodyText2,
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(20.0),
+                      topLeft: Radius.circular(20.0)),
+                  child: Image.asset(img),
                 ),
-              ),
-            ],
+
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    text1,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ),
+              ],
+            ),
           );
         }),
     title: Text(text),
