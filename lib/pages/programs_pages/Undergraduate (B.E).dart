@@ -120,9 +120,9 @@ class UnderGraduatePage extends StatelessWidget {
               text1:
                   'Civil Engineering is a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings.[1][2] Civil engineering is traditionally broken into a number of sub-disciplines. It is the second-oldest engineering discipline after military engineering,[3] and it is defined to distinguish non-military engineering from military engineering.[4] Civil engineering takes place in the public sector from municipal through to national governments, and in the private sector from individual homeowners through to international companies.'),
           programBoxes(context,
-              init: 0.65,
+              init: 0.75,
               min: 0.4,
-              max: 0.65,
+              max: 0.75,
               img: 'assets/images/BEcomp.png',
               text: 'BE IN COMPUTER ENGINEERING',
               text1:
