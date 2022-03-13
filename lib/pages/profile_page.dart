@@ -20,7 +20,7 @@ class ProfilePage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
         title: Text(
-          "Login",
+          "Profile",
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
