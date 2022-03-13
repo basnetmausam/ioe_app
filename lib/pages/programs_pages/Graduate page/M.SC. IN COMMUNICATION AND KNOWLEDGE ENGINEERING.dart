@@ -19,7 +19,7 @@ Widget CommunicationAndKnowledgeCard(BuildContext context) {
               maxChildSize: 0.955,
               builder: (_, controller) => Container(
                 decoration: const BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.white,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
                 child: ListView(
