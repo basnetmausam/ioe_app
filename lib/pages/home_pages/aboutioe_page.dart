@@ -76,9 +76,7 @@ class AboutPage extends StatelessWidget {
               child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              onTap: () {
-                Navigator.pushNamed(context, MyRoutes.facultiesRoute);
-              },
+              onTap: () {},
               leading: const Icon(Ionicons.people_outline),
               title: const Text("Faculties & Staffs"),
             ),
@@ -92,17 +90,6 @@ class AboutPage extends StatelessWidget {
               },
               leading: const Icon(Ionicons.call_outline),
               title: const Text("Contact Us"),
-            ),
-          )),
-          Card(
-              child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              onTap: () {
-                Navigator.pushNamed(context, MyRoutes.ioeloginRoute);
-              },
-              leading: const Icon(Ionicons.mail_outline),
-              title: const Text("IOE Email Login"),
             ),
           )),
         ],

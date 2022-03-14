@@ -38,7 +38,7 @@ class _ExamsState extends State<ResultPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Exams",
+            "Results",
             style: Theme.of(context).textTheme.bodyText1,
           ),
         ),
@@ -50,12 +50,12 @@ class _ExamsState extends State<ResultPage> {
               future: _examList.getexam(),
               builder: (context, snapshot) {
                 var data = snapshot.data;
+                if (!snapshot.hasData) {
+                  return Center(child: CircularProgressIndicator());
+                }
                 return ListView.builder(
                     itemCount: data?.length,
                     itemBuilder: (context, index) {
-                      if (!snapshot.hasData) {
-                        return Center(child: CircularProgressIndicator());
-                      }
                       return Card(
                         child: GestureDetector(
                           onTap: () => {

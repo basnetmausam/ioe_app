@@ -45,7 +45,7 @@ class WorkshopPage extends StatelessWidget {
                         height: 30,
                       ),
                       Text(
-                        "Joint Conference/Workshop by LICT:",
+                        "Joint Conference/Workshop by LICT:                                     ",
                         style: Theme.of(context).textTheme.headline3,
                       ),
                       const SizedBox(

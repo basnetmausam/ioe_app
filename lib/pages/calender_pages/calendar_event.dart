@@ -132,7 +132,7 @@ class CalendarBEWidget extends StatelessWidget {
                     today: date,
                   ),
                   title: Text(event!.eventTitles[index]),
-                  onTap: () {},
+                  // onTap: () {},
                 ),
                 separatorBuilder: (context, _) => const Divider(),
               );

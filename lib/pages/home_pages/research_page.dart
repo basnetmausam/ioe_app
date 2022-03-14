@@ -60,9 +60,7 @@ class ResearchPage extends StatelessWidget {
                 child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.faculresRoute);
-                },
+                onTap: () {},
                 leading: const Icon(Ionicons.people_outline),
                 title: const Text("Faculty Researches"),
               ),
@@ -82,9 +80,7 @@ class ResearchPage extends StatelessWidget {
                 child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.seminarsRoute);
-                },
+                onTap: () {},
                 leading: const Icon(Ionicons.people_circle_outline),
                 title: const Text("Seminars & Conferences"),
               ),
@@ -93,9 +89,7 @@ class ResearchPage extends StatelessWidget {
                 child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.publicationRoute);
-                },
+                onTap: () {},
                 leading: const Icon(Ionicons.book_outline),
                 title: const Text("Publications"),
               ),

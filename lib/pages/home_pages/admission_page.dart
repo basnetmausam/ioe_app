@@ -46,9 +46,7 @@ class AdmissionPage extends StatelessWidget {
           ),
           Card(
               child: ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, MyRoutes.schlorshipRoute);
-            },
+            onTap: () {},
             leading: const Icon(Ionicons.cash_outline),
             title: const Text("Schlorship"),
           ).p8()),
@@ -86,17 +84,13 @@ class AdmissionPage extends StatelessWidget {
           // ).p8()),
           Card(
               child: ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, MyRoutes.evaluationRoute);
-            },
+            onTap: () {},
             leading: const Icon(Ionicons.analytics_outline),
             title: const Text("Degree Equivalence"),
           ).p8()),
           Card(
               child: ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, MyRoutes.examcontrolRoute);
-            },
+            onTap: () {},
             leading: const Icon(Ionicons.help_buoy_outline),
             title: const Text("Exam Controller Division"),
           ).p8()),

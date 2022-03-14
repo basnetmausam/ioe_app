@@ -52,7 +52,7 @@ class PartnershipPage extends StatelessWidget {
               Card(
                 child: ListTile(
                   onTap: () {
-                    Navigator.pushNamed(context, MyRoutes.industryworkRoute);
+                    // Navigator.pushNamed(context, MyRoutes.industryworkRoute);
                   },
                   leading: const Icon(Ionicons.business_outline),
 
@@ -63,7 +63,7 @@ class PartnershipPage extends StatelessWidget {
               Card(
                   child: ListTile(
                 onTap: () {
-                  Navigator.pushNamed(context, MyRoutes.capabilitiesRoute);
+                  // Navigator.pushNamed(context, MyRoutes.capabilitiesRoute);
                 },
                 leading: const Icon(Ionicons.speedometer_outline),
                 title: Text("Available Capabilities and Technologies"),

@@ -51,16 +51,16 @@ class HomePage extends StatelessWidget {
           //   ),
           // ),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
 
           Flexible(
               child: GridView.count(
             crossAxisCount: 2,
-            padding: const EdgeInsets.all(16),
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 4 / 2,
+            padding: const EdgeInsets.all(20),
+            crossAxisSpacing: 25,
+            mainAxisSpacing: 25,
+            childAspectRatio: 2 / 1,
             children: <Widget>[
               InkWell(
                 onTap: () {
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -111,7 +111,9 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          // color: Color.fromARGB(255, 117, 116, 116),
+                          color: Color.fromARGB(255, 117, 116, 116),
+
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -140,7 +142,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -170,7 +172,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -199,7 +201,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -226,7 +228,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -250,7 +252,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
@@ -277,7 +279,7 @@ class HomePage extends StatelessWidget {
                       color: context.cardColor,
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 117, 116, 116),
                           offset: Offset(0.0, 1.0), //(x,y)
                           blurRadius: 6.0,
                         ),
