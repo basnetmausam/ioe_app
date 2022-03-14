@@ -17,6 +17,7 @@ import 'package:ioe_app/pages/admission_pages/msc_page.dart';
 import 'package:ioe_app/pages/admission_pages/phd_page.dart';
 import 'package:ioe_app/pages/admission_pages/schlorship_page.dart';
 import 'package:ioe_app/pages/admission_pages/why_page.dart';
+import 'package:ioe_app/pages/admission_pages/degreeEq.dart';
 import 'package:ioe_app/pages/bottom_navigation.dart';
 import 'package:ioe_app/pages/calender_pages/calender_page.dart';
 import 'package:ioe_app/pages/colleges_page/aff_clz_pages/advanced.dart';
@@ -66,7 +67,7 @@ import 'package:ioe_app/pages/research_pages/publication_page.dart';
 import 'package:ioe_app/pages/research_pages/researchinfrastructures_page.dart';
 import 'package:ioe_app/pages/research_pages/seminars_page.dart'; //exam list
 import 'package:ioe_app/pages/research_pages/workshop_page.dart';
-//check result
+import 'package:ioe_app/pages/research_pages/check_result.dart'; //check result
 
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
@@ -83,7 +84,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
@@ -116,6 +117,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.mscRoute: (context) => const MscPage(),
         MyRoutes.phdRoute: (context) => const PhdPage(),
         MyRoutes.calenderRoute: (context) => const CalendarPage(),
+        MyRoutes.degreEqRoute: (context) => const degreeEqpage(),
         // MyRoutes.eventEditingRoute: (context) => const EventEditingPage(),
 
         MyRoutes.examcontrolRoute: (context) => const ExamPage(),
@@ -170,7 +172,7 @@ class MyApp extends StatelessWidget {
 
         MyRoutes.faculresRoute: (context) => const FacultiesResearchPage(),
         MyRoutes.publicationRoute: (context) => const PublicationsPage(),
-        MyRoutes.seminarsRoute: (context) => const SeminarPage(), //exams list
+        MyRoutes.seminarsRoute: (context) => const ExamPage(), //exams list
         MyRoutes.workshopRoute: (context) => const WorkshopPage(),
 
         //MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result

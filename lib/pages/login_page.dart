@@ -15,16 +15,33 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   loginUI();
+  //   // googlaccout.onCurrentUserChanged.listen((GoogleSignInAccount? account) {
+  //   //   setState(() {
+  //   //     _currentUser = account;
+  //   //   });
+  //   //   if (_currentUser != null) {
+  //   //     _handleGetContact(_currentUser!);
+  //   //   }
+  //   // });
+  //   // _googleSignIn.signInSilently();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Profile",
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
-      ),
-      drawer: myDrawer(context),
+      // appBar: AppBar(
+      //   title: Text(
+      //     "Profile",
+      //     style: Theme.of(context).textTheme.bodyText1,
+      //   ),
+      // ),
+      // backgroundColor: context.canvasColor,
+      // drawer: myDrawer(context),
       body: loginUI(),
     );
   }
@@ -117,14 +134,14 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 10,
               ),
-              const Card(
-                  child: ListTile(
-                title: Text(
-                  "TU Regd.No.",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                trailing: Text("xxxxxxxxxx"),
-              )),
+              // const Card(
+              //     child: ListTile(
+              //   title: Text(
+              //     "TU Regd.No.",
+              //     style: TextStyle(fontWeight: FontWeight.bold),
+              //   ),
+              //   trailing: Text("xxxxxxxxxx"),
+              // )),
               const SizedBox(
                 height: 30,
               ),
@@ -149,21 +166,21 @@ class _LoginPageState extends State<LoginPage> {
                 title: Text("Email"),
                 trailing: Text(email),
               )),
-              const Card(
-                  child: ListTile(
-                title: Text("Contact"),
-                trailing: Text("xxxxxxxxxxx"),
-              )),
-              const Card(
-                  child: ListTile(
-                title: Text("DOB"),
-                trailing: Text("xxxxxxxxxxx"),
-              )),
-              const Card(
-                  child: ListTile(
-                title: Text("Gender"),
-                trailing: Text("xxxxxxxxxxx"),
-              )),
+              // const Card(
+              //     child: ListTile(
+              //   title: Text("Contact"),
+              //   trailing: Text("xxxxxxxxxxx"),
+              // )),
+              // const Card(
+              //     child: ListTile(
+              //   title: Text("DOB"),
+              //   trailing: Text("xxxxxxxxxxx"),
+              // )),
+              // const Card(
+              //     child: ListTile(
+              //   title: Text("Gender"),
+              //   trailing: Text("xxxxxxxxxxx"),
+              // )),
               const SizedBox(
                 height: 30,
               ),

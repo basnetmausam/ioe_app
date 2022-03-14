@@ -91,10 +91,10 @@ class CentresPage extends StatelessWidget {
                       builder: (context) => const SlidingSheetDialog(
                             cornerRadius: 16,
                             // avoidStatusBar: true,
-                            snapSpec: SnapSpec(
-                              // initialSnap: 1,
-                              snappings: [0.6, 1],
-                            ),
+                            // snapSpec: SnapSpec(
+                            //   // initialSnap: 1,
+                            //   snappings: [0.6, 1],
+                            // ),
                             builder: buildSheet2,
                             headerBuilder: buildHeader,
                           )),

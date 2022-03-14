@@ -17,14 +17,24 @@ class ProfilePage extends StatelessWidget {
             child: LoginPage(),
           )
         ],
-        child: MaterialApp(
-          title: 'Profile',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
+        child: Scaffold(
+          appBar: AppBar(
+        title: Text(
+          "Profile",
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+      backgroundColor: context.canvasColor,
+      drawer: myDrawer(context),
+         // 'Profile',
+          //style: Theme.of(context).textTheme.bodyText1,
+          // theme: ThemeData(
+          //   primarySwatch: Colors.blue,
+          // ),
           // drawer: myDrawer(context),
 
-          home: LoginPage(),
-        ));
+          body: LoginPage(),
+        )
+        );
   }
-}//reference:https://medium.com/@palmeiro.leonardo/simple-profile-screen-with-flutter-fe2f1f7cfaf5
+}
