@@ -31,12 +31,11 @@ class NewsDetailPage extends StatelessWidget {
                 child: Container(
                   height: 200.0,
                   width: 500.0,
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     image: DecorationImage(
-                      
-                      image: NetworkImage("http://127.0.0.1:8000" + news.photo.toString()), //news.photo.toString()
+                      image: NetworkImage("https://news-ioe.herokuapp.com" +
+                          news.photo.toString()), //news.photo.toString()
                       fit: BoxFit.fitWidth,
                     ),
                   ),
@@ -52,7 +51,8 @@ class NewsDetailPage extends StatelessWidget {
               10.heightBox,
               ElevatedButton(
                   onPressed: () async {
-                    var url = "http://127.0.0.1:8000" + news.file.toString();
+                    var url =
+                        "https://news-ioe.herokuapp.com" + news.file.toString();
                     if (await canLaunch(url)) {
                       await launch(url,
                           forceSafariVC: true, forceWebView: true);

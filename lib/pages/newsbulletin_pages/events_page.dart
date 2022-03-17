@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/events_data.dart';
 import '../../utils/homeDrawer.dart';
-import '../../utils/newsdata.dart';
 
 class EventsPage extends StatelessWidget {
   const EventsPage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class EventsPage extends StatelessWidget {
         ),
       ),
       drawer: myDrawer(context),
-      body: NewsHaru(),
+      body: EventsHaru(),
     );
   }
 }

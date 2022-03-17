@@ -88,6 +88,18 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
+
+      // SplashScreen(
+      //   seconds: 8,
+      //   navigateAfterSeconds: NavigationPage(),
+      //   title: new Text(
+      //     'IOE App',
+      //     style: new TextStyle(
+      //         fontWeight: FontWeight.bold,
+      //         fontSize: 50.0,
+      //         color: Colors.black26),
+      //   ),
+      // ),
       initialRoute: MyRoutes.navigationRoute,
       routes: {
         MyRoutes.navigationRoute: (context) => const NavigationPage(),

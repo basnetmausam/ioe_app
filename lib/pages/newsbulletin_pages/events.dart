@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:ioe_app/model/newsmodel.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../../model/events_model.dart';
 import '../../utils/homeDrawer.dart';
 
-class BulletinDetailPage extends StatelessWidget {
-  final BulletinModel bulletin;
+class EventsDetailPage extends StatelessWidget {
+  final Datum news;
 
-  const BulletinDetailPage({Key? key, required this.bulletin})
-      : super(key: key);
+  const EventsDetailPage({Key? key, required this.news}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    //print(news.photo.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          bulletin.bulletinTitle.toString(),
+          news.airline[0].slogan.toString(),
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
@@ -35,25 +33,23 @@ class BulletinDetailPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     image: DecorationImage(
-                      image: NetworkImage("https://news-ioe.herokuapp.com" +
-                          bulletin.photo.toString()), //news.photo.toString()
+                      image: NetworkImage(news.airline[0].logo.toString()),
                       fit: BoxFit.fitWidth,
                     ),
                   ),
                 ),
               ),
               20.heightBox,
-              // news.airline[0].name.text.make().px8(),
-              // news.airline[0].country.text.make().px8(),
-              // news.airline[0].slogan.text.make().px8(),
-              // news.airline[0].headQuaters.text.make().px8(),
-              // news.airline[0].website.text.make().px8(),
-              // news.trips.text.bold.make().px16(),
+              news.airline[0].name.text.make().px8(),
+              news.airline[0].country.text.make().px8(),
+              news.airline[0].slogan.text.make().px8(),
+              news.airline[0].headQuaters.text.make().px8(),
+              news.airline[0].website.text.make().px8(),
+              news.trips.text.bold.make().px16(),
               10.heightBox,
               ElevatedButton(
                   onPressed: () async {
-                    var url = "https://news-ioe.herokuapp.com" +
-                        bulletin.file.toString();
+                    const url = 'https://flutterdevs.com/';
                     if (await canLaunch(url)) {
                       await launch(url,
                           forceSafariVC: true, forceWebView: true);

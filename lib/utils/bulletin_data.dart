@@ -10,7 +10,7 @@ import 'package:ioe_app/model/newsmodel.dart';
 class FetchBulletinList {
   var data = [];
   List<BulletinModel> results = [];
-  String urlList = 'http://127.0.0.1:8000/IOEbulletin/';
+  String urlList = 'https://news-ioe.herokuapp.com/IOEbulletin/';
 
   Future<List<BulletinModel>> getbulletin() async {
     var url = Uri.parse(urlList);
@@ -52,8 +52,7 @@ class _BulletinHaruState extends State<BulletinHaru> {
             if (!snapshot.hasData) {
               return Center(child: CircularProgressIndicator());
             }
-            return
-            ListView.builder(
+            return ListView.builder(
               itemCount: data?.length,
               physics: const ClampingScrollPhysics(),
               shrinkWrap: true, // add this otherwise an error
@@ -69,13 +68,12 @@ class _BulletinHaruState extends State<BulletinHaru> {
                     bulletinTitle: data?[index].bulletinTitle,
                     photo: data?[index].photo,
                     date: data?[index].created,
-                    file : data?[index].file,
+                    file: data?[index].file,
                   ),
                 );
               },
             );
-          }
-          ),
+          }),
     );
   }
 }
@@ -86,7 +84,6 @@ class NewsTemplate extends StatelessWidget {
   String? date;
   String? file;
 
-
   NewsTemplate({
     required this.bulletinTitle,
     required this.photo,
@@ -96,7 +93,6 @@ class NewsTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     print(photo.toString());
     return Container(
       margin: const EdgeInsets.all(16),
