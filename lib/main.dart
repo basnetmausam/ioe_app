@@ -51,7 +51,7 @@ import 'package:ioe_app/pages/home_pages/program_page.dart';
 import 'package:ioe_app/pages/home_pages/research_page.dart';
 
 import 'package:ioe_app/pages/newsbulletin_pages/events_page.dart';
-import 'package:ioe_app/pages/newsbulletin_pages/ioemonthly_page.dart';
+import 'package:ioe_app/pages/newsbulletin_pages/bulletin_page.dart';
 import 'package:ioe_app/pages/newsbulletin_pages/news_page.dart';
 
 import 'package:ioe_app/pages/partnership_pages/capabilities_page.dart';
@@ -153,7 +153,7 @@ class MyApp extends StatelessWidget {
 
         //News and Bulletin
         MyRoutes.eventsRoute: (context) => const EventsPage(),
-        MyRoutes.ioemonthlyRoute: (context) => const IOeMonthlyPage(),
+        MyRoutes.ioemonthlyRoute: (context) => const BulletinPage(),
         MyRoutes.newssRoute: (context) => const NewssPage(),
 
         // Partnership Page

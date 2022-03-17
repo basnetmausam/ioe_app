@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ioe_app/utils/bulletin_data.dart';
 
 import '../../utils/homeDrawer.dart';
-import '../../utils/newsdata.dart';
 
-class IOeMonthlyPage extends StatelessWidget {
-  const IOeMonthlyPage({Key? key}) : super(key: key);
+class BulletinPage extends StatelessWidget {
+  const BulletinPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "IOE Monthly Bulletin",
+          "News",
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
       drawer: myDrawer(context),
-      body: NewsHaru(),
+      body: BulletinHaru(),
     );
   }
 }
