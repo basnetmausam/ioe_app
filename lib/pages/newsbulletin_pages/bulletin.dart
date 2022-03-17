@@ -5,10 +5,10 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../../utils/homeDrawer.dart';
 
-class NewsDetailPage extends StatelessWidget {
-  final NewsModel news;
+class BulletinDetailPage extends StatelessWidget {
+  final BulletinModel bulletin;
 
-  const NewsDetailPage({Key? key, required this.news}) : super(key: key);
+  const BulletinDetailPage({Key? key, required this.bulletin}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class NewsDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          news.newsTitle.toString(),
+          bulletin.bulletinTitle.toString(),
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
@@ -36,7 +36,7 @@ class NewsDetailPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     image: DecorationImage(
                       
-                      image: NetworkImage("http://127.0.0.1:8000" + news.photo.toString()), //news.photo.toString()
+                      image: NetworkImage("http://127.0.0.1:8000" + bulletin.photo.toString()), //news.photo.toString()
                       fit: BoxFit.fitWidth,
                     ),
                   ),
@@ -52,7 +52,7 @@ class NewsDetailPage extends StatelessWidget {
               10.heightBox,
               ElevatedButton(
                   onPressed: () async {
-                    var url = "http://127.0.0.1:8000" + news.file.toString();
+                    var url = "http://127.0.0.1:8000" + bulletin.file.toString();
                     if (await canLaunch(url)) {
                       await launch(url,
                           forceSafariVC: true, forceWebView: true);
