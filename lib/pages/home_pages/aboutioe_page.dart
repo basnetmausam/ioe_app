@@ -72,15 +72,15 @@ class AboutPage extends StatelessWidget {
               title: const Text("History of IOE"),
             ),
           )),
-          Card(
-              child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              onTap: () {},
-              leading: const Icon(Ionicons.people_outline),
-              title: const Text("Faculties & Staffs"),
-            ),
-          )),
+          // Card(
+          //     child: Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: ListTile(
+          //     onTap: () {},
+          //     leading: const Icon(Ionicons.people_outline),
+          //     title: const Text("Faculties & Staffs"),
+          //   ),
+          // )),
           Card(
               child: Padding(
             padding: const EdgeInsets.all(8.0),

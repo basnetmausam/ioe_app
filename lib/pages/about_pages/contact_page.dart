@@ -26,7 +26,7 @@ class ContactPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Contact Us",
+                "Send Message",
                 style: Theme.of(context).textTheme.headline2,
               ),
             ),
@@ -34,6 +34,16 @@ class ContactPage extends StatelessWidget {
               children: [
                 Card(
                   child: FormPage(),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Contacts",
+                    style: Theme.of(context).textTheme.headline2,
+                  ),
                 ),
                 const Card(
                     child: ListTile(
