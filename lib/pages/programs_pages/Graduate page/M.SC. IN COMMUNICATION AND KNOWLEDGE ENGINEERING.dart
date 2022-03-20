@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'M.SC. IN CLIMATE CHANGE AND DEVELOPMENT.dart';
 
@@ -18,8 +19,8 @@ Widget CommunicationAndKnowledgeCard(BuildContext context) {
               minChildSize: 0.6,
               maxChildSize: 0.955,
               builder: (_, controller) => Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
+                decoration: BoxDecoration(
+                    color: context.canvasColor,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
                 child: ListView(

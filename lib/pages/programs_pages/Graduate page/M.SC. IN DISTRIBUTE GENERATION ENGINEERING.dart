@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:bulleted_list/bulleted_list.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'M.SC. IN CLIMATE CHANGE AND DEVELOPMENT.dart';
 
@@ -21,8 +22,8 @@ Widget DistributeGenCard(BuildContext context) {
               minChildSize: 0.6,
               maxChildSize: 0.955,
               builder: (_, controller) => Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
+                decoration: BoxDecoration(
+                    color: context.canvasColor,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
                 child: ListView(

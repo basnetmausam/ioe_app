@@ -19,8 +19,8 @@ Widget climateCard(BuildContext context) {
               minChildSize: 0.6,
               maxChildSize: 0.955,
               builder: (_, controller) => Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
+                decoration: BoxDecoration(
+                    color: context.canvasColor,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
                 child: ListView(

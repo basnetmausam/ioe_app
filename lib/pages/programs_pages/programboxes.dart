@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:velocity_x/velocity_x.dart';
+
 import 'Graduate page/M.SC. IN CLIMATE CHANGE AND DEVELOPMENT.dart';
 
 Widget programBoxes(
@@ -30,8 +32,8 @@ Widget programBoxes(
               minChildSize: min,
               maxChildSize: max,
               builder: (_, controller) => Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
+                decoration: BoxDecoration(
+                    color: context.canvasColor,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
                 child: ListView(
