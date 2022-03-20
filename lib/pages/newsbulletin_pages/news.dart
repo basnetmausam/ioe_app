@@ -54,8 +54,8 @@ class NewsDetailPage extends StatelessWidget {
                     var url =
                         "https://news-ioe.herokuapp.com" + news.file.toString();
                     if (await canLaunch(url)) {
-                      await launch(url,
-                          forceSafariVC: true, forceWebView: true);
+                      await launch(url);
+                      //   forceSafariVC: true, forceWebView: true
                     } else {
                       throw 'Could not launch $url';
                     }

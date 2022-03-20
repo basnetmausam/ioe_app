@@ -11,7 +11,7 @@ class BulletinPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "News",
+          "IOE Monthly Bulletin",
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ),
