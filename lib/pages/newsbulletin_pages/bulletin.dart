@@ -55,8 +55,9 @@ class BulletinDetailPage extends StatelessWidget {
                     var url = "https://news-ioe.herokuapp.com" +
                         bulletin.file.toString();
                     if (await canLaunch(url)) {
-                      await launch(url,
-                          forceSafariVC: true, forceWebView: true);
+                      await launch(
+                        url,
+                      );
                     } else {
                       throw 'Could not launch $url';
                     }
