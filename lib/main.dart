@@ -1,3 +1,5 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe_app/pages/about_pages/contact_page.dart';
 import 'package:ioe_app/pages/about_pages/faculties_page.dart';
@@ -71,8 +73,13 @@ import 'package:ioe_app/pages/research_pages/check_result.dart'; //check result
 
 import 'package:ioe_app/utils/routes.dart';
 import 'package:ioe_app/widgets/themes.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-void main() {
+// import 'dart:convert';
+
+//
+
+void main() async {
   runApp(const MyApp());
 }
 
@@ -88,6 +95,7 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
+      home: HomePage(),
 
       // SplashScreen(
       //   seconds: 8,
@@ -190,5 +198,54 @@ class MyApp extends StatelessWidget {
         //MyRoutes.resultRoute: (context) => const CheckResultPage(), //check result
       },
     );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    initPlatform();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Home"),
+          elevation: 0,
+        ),
+        backgroundColor: Colors.grey,
+        body: const Center(child: Text("Push Notification")));
+  }
+
+  Future<void> initPlatform() async {
+    await OneSignal.shared.setAppId("b2770755-916d-4408-9e7d-544f8624e48f");
+    await OneSignal.shared
+        .getDeviceState()
+        .then((value) => {print((value)!.userId)});
+    OneSignal.shared
+        .setNotificationOpenedHandler((OSNotificationOpenedResult result) {
+      var data = result.notification.additionalData;
+
+      var a = data.toString();
+
+      var b = a.split(':');
+      var c = b[1].split('}')[0];
+      var str1 = c.length;
+
+      if (str1 == 7) {
+        Navigator.pushNamed(context, MyRoutes.resultcheckRoute);
+      } else if (str1 == 5) {
+        Navigator.pushNamed(context, MyRoutes.newssRoute);
+      } else {}
+    });
   }
 }
