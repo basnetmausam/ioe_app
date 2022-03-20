@@ -245,6 +245,8 @@ class _HomePageState extends State<HomePage> {
         Navigator.pushNamed(context, MyRoutes.resultcheckRoute);
       } else if (str1 == 5) {
         Navigator.pushNamed(context, MyRoutes.newssRoute);
+      } else if (str1 == 9) {
+        Navigator.pushNamed(context, MyRoutes.ioemonthlyRoute);
       } else {}
     });
   }
