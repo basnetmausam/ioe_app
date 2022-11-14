@@ -99,15 +99,15 @@ class _CheckResultPageState extends State<CheckResultPage> {
                                             ],
                                           ),
                                           actions: <Widget>[
-                                            new FlatButton(
-                                              onPressed: () {
-                                                Navigator.of(context).pop();
-                                                Navigator.of(context).pop();
-                                              },
-                                              textColor: Theme.of(context)
-                                                  .primaryColor,
-                                              child: Text('OK'),
-                                            ),
+                                            // FlatButton(
+                                            //   onPressed: () {
+                                            //     Navigator.of(context).pop();
+                                            //     Navigator.of(context).pop();
+                                            //   },
+                                            //   textColor: Theme.of(context)
+                                            //       .primaryColor,
+                                            //   child: Text('OK'),
+                                            // ),
                                           ],
                                         );
                                       });

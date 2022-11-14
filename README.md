@@ -1,16 +1,34 @@
-# ioe_app
 
-A new Flutter project.
+# IOE App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+IOE App is a mobile application intended to be built for the students and staff of IOE(Institute of Engineering) affiliated colleges. Notices, news, events regarding IOE and results of different programs are to be made available on a single mobile application unlike visiting different portals of IOE.
+## Demo
 
-A few resources to get you started if this is your first Flutter project:
+Insert gif or link to demo
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+- Light/dark mode toggle
+- Cross platform
+- Result Checking
+- News, Notices and IOE monthly bulletin
+- Bachelor and Masters Academic Calender
+- All other informations related to IOE
+
+
+
+
+
+## Tech Stack
+
+**Client:** Flutter, Material UI
+
+**Server:** Django, REST API
+
+
+## Use Case
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
