@@ -5,7 +5,11 @@
 IOE App is a mobile application intended to be built for the students and staff of IOE(Institute of Engineering) affiliated colleges. Notices, news, events regarding IOE and results of different programs are to be made available on a single mobile application unlike visiting different portals of IOE.
 ## Demo
 
-Insert gif or link to demo
+
+
+
+
+https://user-images.githubusercontent.com/74107418/201571360-afa30912-6983-4492-969b-ec5f9d2014b8.mp4
 
 
 ## Features
@@ -29,6 +33,7 @@ Insert gif or link to demo
 
 
 ## Use Case
+![usecase](https://user-images.githubusercontent.com/74107418/201570571-3c4a427e-47d6-42ad-8da3-0625c5a38f12.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
